@@ -1,0 +1,38 @@
+Variable,No Periodontitis (Mean (SD)),Periodontitis (Mean (SD)),P-value
+Age (years),44.68 (11.28),53.77 (13.70),0.000
+Sex,,,
+  1.0,46.4%,48.9%,
+  2.0,53.6%,51.1%,
+Race/Ethnicity,,,
+  Mexican American,5.8%,7.4%,
+  Non-Hispanic Black,5.9%,11.4%,
+  Non-Hispanic White,78.4%,69.8%,
+  Other,6.1%,6.4%,
+  Other Hispanic,3.8%,5.0%,
+Education,,,
+  <HS,5.4%,17.0%,
+  >HS,82.4%,59.2%,
+  HS/GED,12.2%,23.7%,
+PIR,3.81 (1.43),3.02 (1.62),0.000
+BMI (kg/m^2),28.67 (6.28),29.39 (6.68),0.000
+Smoking,,,
+  Current,9.1%,20.1%,
+  Former,21.9%,27.5%,
+  Never,69.0%,52.4%,
+Diabetes,,,
+  No,95.6%,88.6%,
+  Yes,4.4%,11.4%,
+Alcohol (drinks/day),1.88 (1.83),2.00 (2.36),0.000
+Physical Activity,,,
+  Active,40.5%,42.5%,
+  Inactive,59.5%,57.5%,
+Flossing,,,
+  Daily,31.9%,31.3%,
+  Frequent,14.6%,11.9%,
+  Infrequent,32.9%,24.7%,
+  Never,20.6%,32.1%,
+Total Energy (kcal),2228.44 (846.17),2092.22 (871.91),0.000
+Sugar (g),111.70 (64.46),107.11 (66.73),0.000
+Fiber (g),19.01 (9.96),16.87 (9.53),0.000
+Vitamin C (mg),82.94 (78.53),75.08 (73.23),0.000
+Calcium (mg),1045.09 (535.69),927.67 (523.18),0.000

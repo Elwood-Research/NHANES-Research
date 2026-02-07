@@ -1,0 +1,110 @@
+\begin{thebibliography}{17}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Alves-Costa et~al.(2024)Alves-Costa, Nascimento, Peres, Li, Costa, Ribeiro, and Leite]{AlvesCosta2024}
+S.~Alves-Costa, G.~G. Nascimento, M.~A. Peres, Huihua Li, S.~A. Costa, C.~C. Ribeiro, and F.~Leite.
+\newblock Sugar-sweetened beverage consumption and periodontitis among adults: A population-based cross-sectional study.
+\newblock \emph{Journal of Clinical Periodontology}, 2024.
+\newblock \doi{10.1111/jcpe.13961}.
+
+\bibitem[Chen et~al.(2025{\natexlab{a}})Chen, Zhao, and Zhang]{Chen2025b}
+Li~Chen, Rui Zhao, and Yarong Zhang.
+\newblock Association between adjustable dietary factors and periodontitis: Nhanes 2009–2014 and mendelian randomization.
+\newblock \emph{Journal of Translational Medicine}, 2025{\natexlab{a}}.
+\newblock \doi{10.1186/s12967-024-05972-4}.
+
+\bibitem[Nielsen et~al.(2016)Nielsen, Trak-Fellermeier, Joshipura, and Dye]{Nielsen2016}
+S.~Nielsen, M.~Trak-Fellermeier, K.~Joshipura, and B.~Dye.
+\newblock Dietary fiber intake is inversely associated with periodontal disease among us adults.
+\newblock \emph{Journal of Nutrition}, 2016.
+\newblock \doi{10.3945/JN.116.237065}.
+
+\bibitem[Chuai et~al.(2023)Chuai, Dai, Liu, Hu, Wang, and Zhang]{Chuai2023}
+Yuanyuan Chuai, Bichong Dai, Xiaoyun Liu, Menglin Hu, Yuanyin Wang, and Hengguo Zhang.
+\newblock Association of vitamin k, fibre intake and progression of periodontal attachment loss in american adults.
+\newblock \emph{BMC Oral Health}, 2023.
+\newblock \doi{10.1186/s12903-023-02929-9}.
+
+\bibitem[Bidinotto et~al.(2021)Bidinotto, Martínez-Steele, Thomson, Hugo, and Hilgert]{Bidinotto2021}
+A.~B. Bidinotto, E.~Martínez-Steele, W.~Thomson, F.~Hugo, and J.~Hilgert.
+\newblock Investigation of direct and indirect association of ultra-processed foods intake and periodontitis.
+\newblock \emph{Journal of Periodontology}, 2021.
+\newblock \doi{10.1002/JPER.21-0274}.
+
+\bibitem[Li et~al.(2022{\natexlab{a}})Li, Song, and Chen]{Li2022}
+Wei Li, Jukun Song, and Zhu Chen.
+\newblock The association between dietary vitamin c intake and periodontitis: result from the nhanes (2009–2014).
+\newblock \emph{BMC Oral Health}, 2022{\natexlab{a}}.
+\newblock \doi{10.1186/s12903-022-02416-7}.
+
+\bibitem[Wu et~al.(2024)Wu, Zhang, and Cao]{Wu2024}
+Qiqi Wu, Shusen Zhang, and Ruoyan Cao.
+\newblock Association between magnesium depletion score and periodontitis in us adults: results from nhanes 2009–2014.
+\newblock \emph{BMC Oral Health}, 2024.
+\newblock \doi{10.1186/s12903-024-05048-1}.
+
+\bibitem[Li et~al.(2022{\natexlab{b}})Li, Wen, Liu, Shen, Su, and Yang]{Li2022b}
+Xin-yu Li, Ming-Zhe Wen, Hui Liu, Yu-Chen Shen, Li-xin Su, and Xi-tao Yang.
+\newblock Dietary magnesium intake is protective in patients with periodontitis.
+\newblock \emph{Frontiers in Nutrition}, 2022{\natexlab{b}}.
+\newblock \doi{10.3389/fnut.2022.976518}.
+
+\bibitem[Huang et~al.(2025)Huang, Chen, Cong, and Zeng]{Huang2025}
+Huijie Huang, Shiyan Chen, Li~Cong, and Yingjuan Zeng.
+\newblock A cross-sectional study on the relationship between dietary magnesium intake and periodontitis in different body mass index and waist circumference groups: National health and nutrition examination survey, 2009–2014.
+\newblock \emph{Journal of Nutritional Science}, 2025.
+\newblock \doi{10.1017/jns.2025.19}.
+
+\bibitem[Cao et~al.(2025)Cao, Wang, Duan, Wang, and Zhang]{Cao2025}
+Hongliang Cao, Min Wang, Mengna Duan, Song Wang, and Haiyang Zhang.
+\newblock Association of serum calcium level with periodontitis: a cross-sectional study from nhanes 2009–2014.
+\newblock \emph{Frontiers in Nutrition}, 2025.
+\newblock \doi{10.3389/fnut.2024.1520639}.
+
+\bibitem[Liang et~al.(2024)Liang, Lu, and Zhou]{Liang2024}
+Feizhao Liang, Mei Lu, and Yanping Zhou.
+\newblock Associations between single and multiple dietary vitamins and the risk of periodontitis: results from nhanes 2009–2014.
+\newblock \emph{Frontiers in Nutrition}, 2024.
+\newblock \doi{10.3389/fnut.2024.1347712}.
+
+\bibitem[Zhu et~al.(2025)Zhu, Liang, Yang, Su, Ou, Zhang, Liu, Liu, and Feng]{Zhu2025}
+Long Zhu, Si~Liang, Yang Yang, Ziqi Su, Lijia Ou, Weimeng Zhang, Binjie Liu, Ousheng Liu, and Hui Feng.
+\newblock Association between vitamin k intake and periodontitis in american elderly population: a cross-sectional analysis of nhanes data.
+\newblock \emph{Clinical Oral Investigations}, 2025.
+\newblock \doi{10.1007/s00784-025-06527-7}.
+
+\bibitem[Chen et~al.(2025{\natexlab{b}})Chen, Han, Liu, and Xu]{Chen2025a}
+Xinru Chen, Rui Han, Xinwei Liu, and Jincheng Xu.
+\newblock Association between composite dietary antioxidant index and the prevalence of periodontitis: results from nhanes 2009–2014.
+\newblock \emph{BMC Oral Health}, 2025{\natexlab{b}}.
+\newblock \doi{10.1186/s12903-025-06151-7}.
+
+\bibitem[Wright et~al.(2020)Wright, McKenna, Nugent, Winning, Linden, and Woodside]{Wright2020}
+D.~Wright, G.~McKenna, A.~Nugent, L.~Winning, G.~Linden, and J.~Woodside.
+\newblock Association between diet and periodontitis: a cross-sectional study of 10,000 nhanes participants.
+\newblock \emph{American Journal of Clinical Nutrition}, 2020.
+\newblock \doi{10.1093/ajcn/nqaa266}.
+
+\bibitem[Shi et~al.(2024)Shi, Zhu, Du, Deng, Li, Sáenz-Ravello, Xu, and Li]{Shi2024}
+Xinyi Shi, Peijun Zhu, M.~Du, Ke~Deng, Ping Li, G.~Sáenz-Ravello, Shulan Xu, and An~Li.
+\newblock Dietary patterns and periodontitis: A systematic review.
+\newblock \emph{Journal of Periodontal Research}, 2024.
+\newblock \doi{10.1111/jre.13346}.
+
+\bibitem[Gong et~al.(2025)Gong, Lv, Fan, and Fei]{Gong2025}
+Shanshan Gong, Bin Lv, Yihong Fan, and Yuchang Fei.
+\newblock Association between dietary live microbe intake and periodontitis in adults: Evidence from nhanes.
+\newblock \emph{Oral Health \& Preventive Dentistry}, 2025.
+\newblock \doi{10.3290/j.ohpd.c_2026}.
+
+\bibitem[Zhou et~al.(2025)Zhou, Cai, Li, Shu, Qin, Song, and Peng]{Zhou2025}
+Ya-Shi Zhou, Song Cai, Si-Yu Li, Miao Shu, Ben Qin, Jukun Song, and Juanmin Peng.
+\newblock Association of dietary intake of theobromine with periodontitis: Nhanes 2009–2014.
+\newblock \emph{BMC Oral Health}, 2025.
+\newblock \doi{10.1186/s12903-025-05453-0}.
+
+\end{thebibliography}
