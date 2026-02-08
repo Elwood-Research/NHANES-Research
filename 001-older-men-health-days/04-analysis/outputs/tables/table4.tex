@@ -1,0 +1,24 @@
+\begin{table}[ht]
+\centering
+\caption{Sensitivity Analyses: Association Between Chronic Conditions and Poor Physical Health Days}
+\label{tab:sensitivity}
+\begin{adjustbox}{width=\textwidth}
+\begin{tabular}{llll}
+\toprule
+Analysis & 1 Condition & 2 Conditions & 3+ Conditions \\
+\midrule
+Primary Model (Negative Binomial) & 1.22 (1.22--1.22) & 1.55 (1.55--1.55) & 2.08 (2.08--2.08) \\
+Poisson Regression & 1.25 (1.24--1.25) & 1.59 (1.59--1.59) & 2.09 (2.09--2.09) \\
+Zero-Inflated NB (Zero \%: 67.8\%) & 1.22 (1.22--1.22) & 1.55 (1.55--1.55) & 2.08 (2.08--2.08) \\
+\midrule
+Age 60-69 (n=2260) & 1.19 & 1.59 & 2.08 \\
+Age 70-79 (n=1653) & 1.22 & 1.71 & 2.50 \\
+Age 80+ (n=1009) & 1.13 & 1.18 & 1.50 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+
+\vspace{0.5em}
+\small
+\textit{Note:} Values are Incidence Rate Ratios (95\% CI). All models adjusted for age, race/ethnicity, education, and income-to-poverty ratio. The primary negative binomial model includes all covariates. Age-stratified models show consistent dose-response patterns across age groups.
+\end{table}

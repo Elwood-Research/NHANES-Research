@@ -1,0 +1,29 @@
+{
+  "physical_health_days": {
+    "mean": 4.08,
+    "sd": 8.76,
+    "median": 0.0,
+    "q1": 0.0,
+    "q3": 3.0,
+    "severe_n": 726,
+    "severe_pct": 14.8
+  },
+  "mental_health_days": {
+    "mean": 1.07,
+    "sd": 3.42,
+    "median": 0.0,
+    "q1": 0.0,
+    "q3": 0.0,
+    "severe_n": 135,
+    "severe_pct": 2.8
+  },
+  "activity_limitation_days": {
+    "mean": 0.75,
+    "sd": 2.95,
+    "median": 0.0,
+    "q1": 0.0,
+    "q3": 0.0,
+    "severe_n": 111,
+    "severe_pct": 2.4
+  }
+}

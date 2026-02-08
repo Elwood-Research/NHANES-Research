@@ -1,0 +1,141 @@
+\begin{thebibliography}{19}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Jindai et~al.(2016)Jindai, Nielson, Vorderstrasse, and Qui{\\~n}ones]{jindai2016multimorbidity}
+Kazuaki Jindai, Carrie~M Nielson, Beth~A Vorderstrasse, and Ana~R Qui{\\~n}ones.
+\newblock Multimorbidity and functional limitations among adults 65 or older, {NHANES} 2005--2012.
+\newblock \emph{Preventing Chronic Disease}, 13:\penalty0 160174, 2016.
+\newblock \doi{10.5888/pcd13.160174}.
+\newblock URL \url{https://doi.org/10.5888/pcd13.160174}.
+
+\bibitem[Su et~al.(2014)Su, Stimpson, and Wilson]{su2014racial}
+Dejun Su, Jim~P Stimpson, and Fernando~A Wilson.
+\newblock Racial disparities in mortality among middle-aged and older men.
+\newblock \emph{American Journal of Men's Health}, 9\penalty0 (4):\penalty0 289--300, 2014.
+\newblock \doi{10.1177/1557988314540199}.
+\newblock URL \url{https://doi.org/10.1177/1557988314540199}.
+
+\bibitem[Verbrugge(2025)]{verbrugge2025women}
+Lois~M Verbrugge.
+\newblock Women and men: mortality and health of older people.
+\newblock pages 139--174, 2025.
+\newblock \doi{10.4324/9781003635390-8}.
+\newblock URL \url{https://doi.org/10.4324/9781003635390-8}.
+
+\bibitem[Moriarty et~al.(2003)Moriarty, Zack, and Kobau]{moriarty2003cdc}
+David~G Moriarty, Mathew~M Zack, and Rosemarie Kobau.
+\newblock The {Centers for Disease Control and Prevention's Healthy Days Measures}--{Population} tracking of perceived physical and mental health over time.
+\newblock \emph{Health and Quality of Life Outcomes}, 1:\penalty0 37, 2003.
+\newblock \doi{10.1186/1477-7525-1-37}.
+\newblock URL \url{https://doi.org/10.1186/1477-7525-1-37}.
+
+\bibitem[Barile et~al.(2013)Barile, Reeve, Smith, Zack, Mitchell, Kobau, Cella, Luncheon, and Thompson]{barile2013monitoring}
+John~P Barile, Bryce~B Reeve, Ashley~Wilder Smith, Matthew~M Zack, Sandra~A Mitchell, Rosemarie Kobau, David~F Cella, Cecily Luncheon, and William~W Thompson.
+\newblock Monitoring population health for {Healthy People 2020}: evaluation of the {NIH} {PROMIS} global health, {CDC Healthy Days}, and satisfaction with life instruments.
+\newblock \emph{Quality of Life Research}, 22\penalty0 (6):\penalty0 1201--1211, 2013.
+\newblock \doi{10.1007/s11136-012-0246-z}.
+\newblock URL \url{https://doi.org/10.1007/s11136-012-0246-z}.
+
+\bibitem[Barile et~al.(2016)Barile, Horner-Johnson, Krahn, Zack, Miranda, DeMichele, Ford, and Thompson]{barile2016measurement}
+John~P Barile, Willi Horner-Johnson, Gloria Krahn, Matthew Zack, David Miranda, Kimberly DeMichele, Derek Ford, and William~W Thompson.
+\newblock Measurement characteristics for two health-related quality of life measures in older adults: the {SF-36} and the {CDC Healthy Days} items.
+\newblock \emph{Disability and Health Journal}, 9\penalty0 (4):\penalty0 567--574, 2016.
+\newblock \doi{10.1016/j.dhjo.2016.04.008}.
+\newblock URL \url{https://doi.org/10.1016/j.dhjo.2016.04.008}.
+
+\bibitem[Turbow and Vaughan(2025)]{turbow2025chronic}
+Sara~D Turbow and Camille~P Vaughan.
+\newblock Chronic conditions, multimorbidity, and health outcomes among {US} adults.
+\newblock \emph{Preventing Chronic Disease}, 22:\penalty0 250219, 2025.
+\newblock \doi{10.5888/pcd22.250219}.
+\newblock URL \url{https://doi.org/10.5888/pcd22.250219}.
+
+\bibitem[Wang et~al.(2017)Wang, Palmer, Cocker, and Sanderson]{wang2017multimorbidity}
+Lili Wang, Andrew~J Palmer, Fiona Cocker, and Kristy Sanderson.
+\newblock Multimorbidity and health-related quality of life ({HRQoL}) in a nationally representative population sample: implications of count versus cluster method for defining multimorbidity on {HRQoL}.
+\newblock \emph{Health and Quality of Life Outcomes}, 15\penalty0 (1):\penalty0 7, 2017.
+\newblock \doi{10.1186/s12955-016-0580-x}.
+\newblock URL \url{https://doi.org/10.1186/s12955-016-0580-x}.
+
+\bibitem[Tang and Vasquez(2019)]{tang2019cancer}
+Fei Tang and Elizabeth Vasquez.
+\newblock Cancer prevalence and the role of multimorbidity among older adults: using {NHANES} 2011-2016.
+\newblock \emph{Innovation in Aging}, 3\penalty0 (Supplement_1):\penalty0 S460--S460, 2019.
+\newblock \doi{10.1093/geroni/igz038.1721}.
+\newblock URL \url{https://doi.org/10.1093/geroni/igz038.1721}.
+
+\bibitem[Lahti et~al.(2024)Lahti, Mikkola, Wasenius, T{\"o}rm{\"a}kangas, Ikonen, Siltanen, Eriksson, and von Bonsdorff]{lahti2024social}
+Anna-Maria Lahti, Tuija~M Mikkola, Niko~S Wasenius, Timo T{\"o}rm{\"a}kangas, Jenni~N Ikonen, Sini Siltanen, Johan~G Eriksson, and Mikaela~B von Bonsdorff.
+\newblock Social mobility and health-related quality of life trajectory classes among older women and men.
+\newblock \emph{Journal of Aging and Health}, 37\penalty0 (3-4):\penalty0 220--232, 2024.
+\newblock \doi{10.1177/08982643241242513}.
+\newblock URL \url{https://doi.org/10.1177/08982643241242513}.
+
+\bibitem[Delgado et~al.(2023)Delgado, Kermah, Archibald, Adewumi, Bell, and Thorpe]{delgado2023difference}
+Paul Delgado, Dulcie Kermah, Paul Archibald, Mopileola~T Adewumi, Caryn~N Bell, and Roland~J Thorpe.
+\newblock Difference in all-cause mortality between unemployed and employed {Black} men: analysis using the {National Health and Nutrition Examination Survey} ({NHANES}) {III}.
+\newblock \emph{International Journal of Environmental Research and Public Health}, 20\penalty0 (2):\penalty0 1594, 2023.
+\newblock \doi{10.3390/ijerph20021594}.
+\newblock URL \url{https://doi.org/10.3390/ijerph20021594}.
+
+\bibitem[Savela(2010)]{savela2010physical}
+Salla~L Savela.
+\newblock Physical activity at midlife and health-related quality of life in older men.
+\newblock \emph{Archives of Internal Medicine}, 170\penalty0 (13):\penalty0 1171, 2010.
+\newblock \doi{10.1001/archinternmed.2010.187}.
+\newblock URL \url{https://doi.org/10.1001/archinternmed.2010.187}.
+
+\bibitem[Elavsky and McAuley(2023)]{elavsky2023role}
+Steriani Elavsky and Edward McAuley.
+\newblock Role of physical activity in older adults' quality of life.
+\newblock pages 493--504, 2023.
+\newblock \doi{10.4324/9781003423430-45}.
+\newblock URL \url{https://doi.org/10.4324/9781003423430-45}.
+
+\bibitem[Kindratt et~al.(2023)Kindratt, Moza, Rethorst, and Liao]{kindratt2023spend}
+Tiffany~B Kindratt, Jhoceline Moza, Chad~D Rethorst, and Yue Liao.
+\newblock How do people spend their day? {Sociodemographic} disparities in 24-hour movement guideline adherence among {US} adults using 2017--2020 {NHANES} data.
+\newblock \emph{Journal of Racial and Ethnic Health Disparities}, 11\penalty0 (4):\penalty0 2346--2354, 2023.
+\newblock \doi{10.1007/s40615-023-01702-6}.
+\newblock URL \url{https://doi.org/10.1007/s40615-023-01702-6}.
+
+\bibitem[Kirby(2024)]{kirby2024addressing}
+Roger Kirby.
+\newblock Addressing health disparities between men and women.
+\newblock \emph{Trends in Urology and Men's Health}, 15\penalty0 (2):\penalty0 1--1, 2024.
+\newblock \doi{10.1002/tre.963}.
+\newblock URL \url{https://doi.org/10.1002/tre.963}.
+
+\bibitem[Crescioni et~al.(2010)Crescioni, Gorina, Bilheimer, and Gillum]{crescioni2010trends}
+Mabel Crescioni, Yelena Gorina, Linda Bilheimer, and Richard~F Gillum.
+\newblock Trends in health status and health care use among older men.
+\newblock \emph{Hyattsville, MD: National Center for Health Statistics}, 2010.
+\newblock \doi{10.15620/cdc.59326}.
+\newblock URL \url{https://doi.org/10.15620/cdc.59326}.
+
+\bibitem[Zullig(2010)]{zullig2010creating}
+Keith~John Zullig.
+\newblock Creating and using the {CDC HRQOL} healthy days index with fixed option survey responses.
+\newblock \emph{Quality of Life Research}, 19\penalty0 (3):\penalty0 413--424, 2010.
+\newblock \doi{10.1007/s11136-010-9584-x}.
+\newblock URL \url{https://doi.org/10.1007/s11136-010-9584-x}.
+
+\bibitem[Dumas et~al.(2020)Dumas, Dongchung, Sanderson, Bartley, and Seligson]{dumas2020comparison}
+Sarah~E Dumas, Tenzin~Yangchen Dongchung, Michael~L Sanderson, Katherine Bartley, and Amber~Levanon Seligson.
+\newblock A comparison of the four healthy days measures ({HRQOL-4}) with a single measure of self-rated general health in a population-based health survey in {New York City}.
+\newblock \emph{Health and Quality of Life Outcomes}, 18\penalty0 (1):\penalty0 1--12, 2020.
+\newblock \doi{10.1186/s12955-020-01560-4}.
+\newblock URL \url{https://doi.org/10.1186/s12955-020-01560-4}.
+
+\bibitem[D{\'i}az-Venegas and Wong(2016)]{diaz2016trajectories}
+Carlos D{\'i}az-Venegas and Rebeca Wong.
+\newblock Trajectories of limitations in activities of daily living among older adults in {Mexico}, 2001--2012.
+\newblock \emph{Disability and Health Journal}, 9\penalty0 (3):\penalty0 524--532, 2016.
+\newblock \doi{10.1016/j.dhjo.2016.01.011}.
+\newblock URL \url{https://doi.org/10.1016/j.dhjo.2016.01.011}.
+
+\end{thebibliography}

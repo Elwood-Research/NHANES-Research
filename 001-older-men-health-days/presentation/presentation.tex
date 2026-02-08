@@ -1,0 +1,426 @@
+\documentclass[aspectratio=169,11pt]{beamer}
+
+% Theme and colors
+\usetheme{Madrid}
+\usecolortheme{seahorse}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}[frame number]
+
+% Packages
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{adjustbox}
+
+% Graphics path
+\graphicspath{{../04-analysis/outputs/figures/}}
+
+% Title information
+\title[Physical Health Days in Older Men]{Chronic Conditions and Physical Health Days Among Older Men}
+\subtitle{Results from NHANES 2001-2018}
+\author{Elwood Research}
+\institute{Independent Research}
+\date{February 2026}
+
+\begin{document}
+
+% Slide 1: Title
+\begin{frame}
+\titlepage
+\end{frame}
+
+% Slide 2: Background
+\begin{frame}{Background and Rationale}
+\begin{columns}
+\column{0.55\textwidth}
+\textbf{Aging Population:}
+\begin{itemize}
+    \item By 2050: 88 million Americans aged 65+ (double 2015)
+    \item Men face unique health challenges
+    \item Higher mortality despite fewer reported conditions
+\end{itemize}
+
+\vspace{0.5em}
+\textbf{Health-Related Quality of Life:}
+\begin{itemize}
+    \item CDC Healthy Days: validated population measure
+    \item Captures burden of physical health problems
+    \item Simple yet powerful 0-30 day metric
+\end{itemize}
+
+\column{0.4\textwidth}
+\begin{block}{Key Questions}
+\begin{itemize}
+    \item How do chronic conditions affect physical health days?
+    \item What role do socioeconomic factors play?
+    \item Can physical activity protect against poor health days?
+\end{itemize}
+\end{block}
+\end{columns}
+\end{frame}
+
+% Slide 3: Objectives and Hypotheses
+\begin{frame}{Study Objectives}
+\textbf{Primary Objective:}
+\begin{itemize}
+    \item Identify association between chronic disease burden and poor physical health days among U.S. men aged 60+
+\end{itemize}
+
+\vspace{0.5em}
+\textbf{Secondary Objectives:}
+\begin{itemize}
+    \item Examine mental health-physical health relationships
+    \item Assess socioeconomic disparities
+    \item Evaluate racial/ethnic differences
+    \item Determine protective effects of physical activity
+\end{itemize}
+
+\vspace{0.5em}
+\textbf{Key Hypotheses:}
+\begin{itemize}
+    \item Dose-response relationship: more chronic conditions $\rightarrow$ more poor health days
+    \item Higher SES protective; racial disparities persist
+    \item Physical activity protective even among those with chronic conditions
+\end{itemize}
+\end{frame}
+
+% Slide 4: Methods Overview
+\begin{frame}{Methods Overview}
+\begin{columns}
+\column{0.5\textwidth}
+\textbf{Data Source:}
+\begin{itemize}
+    \item NHANES 2001-2018 (9 cycles)
+    \item Nationally representative
+    \item Complex sampling design
+\end{itemize}
+
+\vspace{0.5em}
+\textbf{Study Population:}
+\begin{itemize}
+    \item Males aged 60+ years
+    \item Final n = 4,922
+    \item Weighted: 22.3 million U.S. men
+\end{itemize}
+
+\column{0.45\textwidth}
+\textbf{Primary Outcome:}
+\begin{itemize}
+    \item Poor Physical Health Days (0-30)
+    \item ``Days in past 30 when physical health not good''
+\end{itemize}
+
+\vspace{0.5em}
+\textbf{Statistical Approach:}
+\begin{itemize}
+    \item Negative binomial regression
+    \item Survey-weighted analysis
+    \item Adjusted for demographics, SES, behaviors
+\end{itemize}
+\end{columns}
+\end{frame}
+
+% Slide 5: STROBE Flow
+\begin{frame}{Study Flow and Sample Selection}
+\centering
+\includegraphics[width=0.85\textwidth]{strobe_flowchart.png}
+\end{frame}
+
+% Slide 6: Sample Characteristics
+\begin{frame}{Sample Characteristics (n = 4,922)}
+\centering
+\small
+\begin{tabular}{lc||lc}
+\toprule
+\textbf{Characteristic} & \textbf{\%} & \textbf{Characteristic} & \textbf{\%} \\
+\midrule
+\multicolumn{2}{c}{\textit{Age Group}} & \multicolumn{2}{c}{\textit{Education}} \\
+\quad 60-69 years & 45.9 & \quad $<$ High School & 23.8 \\
+\quad 70-79 years & 33.6 & \quad High School Grad & 23.6 \\
+\quad 80+ years & 20.5 & \quad Some College & 22.9 \\
+\multicolumn{2}{c}{} & \quad College Graduate+ & 29.7 \\
+\midrule
+\multicolumn{2}{c}{\textit{Race/Ethnicity}} & \multicolumn{2}{c}{\textit{Chronic Conditions}} \\
+\quad Non-Hispanic White & 81.7 & \quad 0 conditions & 18.7 \\
+\quad Non-Hispanic Black & 7.8 & \quad 1 condition & 30.9 \\
+\quad Mexican American & 3.7 & \quad 2 conditions & 29.8 \\
+\quad Other & 6.8 & \quad 3+ conditions & 20.6 \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.5em}
+\begin{block}{\centering Key Finding}
+\centering 81.3\% of older men have $\geq$1 chronic condition; 20.6\% have multimorbidity (3+ conditions)
+\end{block}
+\end{frame}
+
+% Slide 7: Primary Results - Chronic Conditions
+\begin{frame}{Primary Finding: Chronic Conditions and Physical Health Days}
+\centering
+\begin{block}{\centering Dose-Response Relationship}
+\centering Each additional chronic condition progressively increases poor physical health days
+\end{block}
+
+\vspace{0.5em}
+\centering
+\begin{tabular}{lccc}
+\toprule
+\textbf{Chronic Conditions} & \textbf{IRR} & \textbf{95\% CI} & \textbf{p-value} \\
+\midrule
+1 Condition & 1.22 & 1.22--1.22 & $<$0.001 \\
+2 Conditions & 1.55 & 1.55--1.55 & $<$0.001 \\
+3+ Conditions & \textcolor{red}{\textbf{2.08}} & 2.08--2.08 & $<$0.001 \\
+\bottomrule
+\end{tabular}
+
+\vspace{1em}
+\textit{Reference: 0 chronic conditions}
+
+\vspace{0.5em}
+\begin{itemize}
+    \item Men with 3+ conditions have \textbf{twice the rate} of poor physical health days
+    \item Highly statistically significant ($p < 0.001$) at all levels
+    \item Represents $>$4 additional poor health days per month
+\end{itemize}
+\end{frame}
+
+% Slide 8: Additional Findings - Disparities
+\begin{frame}{Racial and Socioeconomic Disparities Persist}
+\begin{columns}
+\column{0.5\textwidth}
+\textbf{Racial/Ethnic Disparities:}
+\begin{itemize}
+    \item Mexican American: IRR = 1.43
+    \begin{itemize}
+        \item 43\% higher rate than White men
+        \item Persists despite Medicare eligibility
+    \end{itemize}
+    \item Non-Hispanic Black: IRR = 0.94
+    \begin{itemize}
+        \item Similar to White men
+    \end{itemize}
+\end{itemize}
+
+\column{0.45\textwidth}
+\textbf{Socioeconomic Gradients:}
+\begin{itemize}
+    \item Income (per unit PIR): IRR = 0.92
+    \begin{itemize}
+        \item 8\% reduction per unit increase
+    \end{itemize}
+    \item Education:
+    \begin{itemize}
+        \item $<$High School: IRR = 1.18
+        \item 18\% higher than college grads
+    \end{itemize}
+\end{itemize}
+\end{columns}
+
+\vspace{0.5em}
+\begin{alertblock}{Key Insight}
+\centering Disparities persist in Medicare-eligible population $\rightarrow$ health insurance alone insufficient to eliminate inequities
+\end{alertblock}
+\end{frame}
+
+% Slide 9: Protective Factors
+\begin{frame}{Physical Activity: A Key Protective Factor}
+\centering
+\begin{block}{\centering Physical Activity Effect}
+\centering High physical activity associated with 19\% fewer poor physical health days
+\end{block}
+
+\vspace{0.5em}
+\begin{tabular}{lc}
+\toprule
+\textbf{Protective Factor} & \textbf{IRR} \\
+\midrule
+High Physical Activity & \textcolor{blue}{\textbf{0.81}} \\
+Income (per unit PIR) & 0.92 \\
+Non-Hispanic Black & 0.94 \\
+\bottomrule
+\end{tabular}
+\hspace{1cm}
+\begin{tabular}{lc}
+\toprule
+\textbf{Risk Factor} & \textbf{IRR} \\
+\midrule
+3+ Chronic Conditions & \textcolor{red}{\textbf{2.08}} \\
+Mexican American & 1.43 \\
+Current Smoker & 1.36 \\
+$<$High School Education & 1.18 \\
+\bottomrule
+\end{tabular}
+
+\vspace{1em}
+\begin{itemize}
+    \item Physical activity protective \textbf{even among those with chronic conditions}
+    \item Benefits extend beyond disease prevention
+    \item Direct effects on physical functioning and well-being
+\end{itemize}
+\end{frame}
+
+% Slide 10: Visual Summary
+\begin{frame}{Forest Plot: Summary of Associations}
+\centering
+\includegraphics[width=0.9\textwidth]{figure2_associations.png}
+
+\vspace{0.3em}
+\small
+IRR = Incidence Rate Ratio. Error bars = 95\% CI. Ref: 0 conditions, White, College grad, Never smoker, Low activity, Normal BMI.
+\end{frame}
+
+% Slide 11: Distribution and Interactions
+\begin{frame}{Outcome Distribution and Stratified Analyses}
+\begin{columns}
+\column{0.5\textwidth}
+\centering
+\textbf{Outcome Distributions}
+
+\includegraphics[width=\textwidth]{figure1_distribution.png}
+
+\small
+Zero-inflated, right-skewed distributions
+\column{0.5\textwidth}
+\centering
+\textbf{Stratified Analyses}
+
+\includegraphics[width=\textwidth]{figure3_interactions.png}
+
+\small
+Consistent associations across age, race, activity level
+\end{columns}
+\end{frame}
+
+% Slide 12: Sensitivity Analyses
+\begin{frame}{Robustness of Findings}
+\centering
+\begin{block}{Sensitivity Analyses Confirm Primary Results}
+\end{block}
+
+\vspace{0.3em}
+\small
+\begin{tabular}{lccc}
+\toprule
+\textbf{Analysis} & \textbf{1 Condition} & \textbf{2 Conditions} & \textbf{3+ Conditions} \\
+\midrule
+Primary (Negative Binomial) & 1.22 & 1.55 & 2.08 \\
+Poisson Regression & 1.25 & 1.59 & 2.09 \\
+Zero-Inflated NB & 1.22 & 1.55 & 2.08 \\
+\midrule
+Age 60-69 (n=2,260) & 1.19 & 1.59 & 2.08 \\
+Age 70-79 (n=1,653) & 1.22 & 1.71 & 2.50 \\
+Age 80+ (n=1,009) & 1.13 & 1.18 & 1.50 \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.8em}
+\begin{itemize}
+    \item Dose-response pattern consistent across model specifications
+    \item Age-stratified analyses show stronger effects in 70-79 group
+    \item Zero-inflation (67.8\%) appropriately addressed
+\end{itemize}
+\end{frame}
+
+% Slide 13: Conclusions
+\begin{frame}{Conclusions and Implications}
+\begin{columns}
+\column{0.55\textwidth}
+\textbf{Key Findings:}
+\begin{itemize}
+    \item Strong dose-response: 3+ conditions $\rightarrow$ 2$\times$ rate of poor health days
+    \item Disparities persist despite Medicare coverage
+    \item Physical activity highly protective (IRR = 0.81)
+    \item 14.8\% report $\geq$14 poor physical health days
+\end{itemize}
+
+\vspace{0.5em}
+\textbf{Clinical Implications:}
+\begin{itemize}
+    \item Address multimorbidity comprehensively
+    \item Prioritize physical activity counseling
+    \item Attend to social determinants of health
+\end{itemize}
+
+\column{0.4\textwidth}
+\begin{alertblock}{Public Health Priorities}
+\begin{itemize}
+    \item Chronic disease prevention
+    \item Physical activity promotion
+    \item Health equity initiatives
+    \item Address structural determinants
+\end{itemize}
+\end{alertblock}
+
+\begin{block}{Bottom Line}
+\small
+Physical activity is a key modifiable protective factor for older men, even among those with chronic conditions.
+\end{block}
+\end{columns}
+\end{frame}
+
+% Slide 14: Strengths and Limitations
+\begin{frame}{Strengths and Limitations}
+\begin{columns}
+\column{0.48\textwidth}
+\textbf{Strengths:}
+\begin{itemize}
+    \item Nationally representative sample
+    \item Large sample (n = 4,922)
+    \item Validated outcome measure
+    \item 18 years of data (9 cycles)
+    \item Survey-adjusted analysis
+    \item Focus on understudied population
+\end{itemize}
+
+\column{0.48\textwidth}
+\textbf{Limitations:}
+\begin{itemize}
+    \item Cross-sectional design
+    \item Self-reported data
+    \item Excludes institutionalized
+    \item Potential residual confounding
+    \item Cannot establish causality
+\end{itemize}
+\end{columns}
+\end{frame}
+
+% Slide 15: Future Directions
+\begin{frame}{Future Research Directions}
+\textbf{Needed Research:}
+\begin{itemize}
+    \item \textbf{Longitudinal studies:} Causal relationships and trajectories over time
+    \item \textbf{Intervention studies:} RCTs targeting physical activity and multimorbidity
+    \item \textbf{Qualitative research:} Men's experiences and perspectives on health
+    \item \textbf{Gender-specific approaches:} Develop men-focused health interventions
+    \item \textbf{Health equity research:} Address structural determinants of disparities
+\end{itemize}
+
+\vspace{0.8em}
+\begin{block}{Call to Action}
+\centering
+Addressing determinants of poor physical health days requires coordinated efforts across clinical practice, public health, and policy to help older men live longer, healthier, more fulfilling lives.
+\end{block}
+\end{frame}
+
+% Slide 16: Acknowledgments
+\begin{frame}{Acknowledgments}
+\centering
+\textbf{Data Source:}
+
+National Health and Nutrition Examination Survey (NHANES)\\
+National Center for Health Statistics (NCHS)\\
+Centers for Disease Control and Prevention (CDC)
+
+\vspace{1.5em}
+\textbf{Contact:}
+
+Elwood Research\\
+elwoodresearch@gmail.com
+
+\vspace{1.5em}
+\small
+This research used publicly available de-identified NHANES data.\\
+No direct human subjects involvement.
+\end{frame}
+
+\end{document}

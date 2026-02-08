@@ -1,0 +1,197 @@
+{
+  "primary_nb": {
+    "coefficients": {
+      "chronic_1": {
+        "irr": 1.217,
+        "ci_low": 1.215,
+        "ci_high": 1.22,
+        "pvalue": 0.0
+      },
+      "chronic_2": {
+        "irr": 1.551,
+        "ci_low": 1.548,
+        "ci_high": 1.554,
+        "pvalue": 0.0
+      },
+      "chronic_3plus": {
+        "irr": 2.08,
+        "ci_low": 2.076,
+        "ci_high": 2.085,
+        "pvalue": 0.0
+      }
+    }
+  },
+  "poisson": {
+    "coefficients": {
+      "chronic_1": {
+        "irr": 1.246,
+        "ci_low": 1.244,
+        "ci_high": 1.247,
+        "pvalue": 0.0
+      },
+      "chronic_2": {
+        "irr": 1.591,
+        "ci_low": 1.59,
+        "ci_high": 1.593,
+        "pvalue": 0.0
+      },
+      "chronic_3plus": {
+        "irr": 2.092,
+        "ci_low": 2.09,
+        "ci_high": 2.094,
+        "pvalue": 0.0
+      }
+    }
+  },
+  "zinb": {
+    "zero_proportion": 0.678,
+    "coefficients": {
+      "chronic_1": {
+        "irr": 1.217,
+        "ci_low": 1.215,
+        "ci_high": 1.22,
+        "pvalue": 0.0
+      },
+      "chronic_2": {
+        "irr": 1.551,
+        "ci_low": 1.548,
+        "ci_high": 1.554,
+        "pvalue": 0.0
+      },
+      "chronic_3plus": {
+        "irr": 2.08,
+        "ci_low": 2.076,
+        "ci_high": 2.085,
+        "pvalue": 0.0
+      }
+    }
+  },
+  "stratified": {
+    "60-69": {
+      "n": 2260,
+      "coefficients": {
+        "chronic_1": {
+          "irr": 1.189,
+          "ci_low": 1.186,
+          "ci_high": 1.193,
+          "pvalue": 0.0
+        },
+        "chronic_2": {
+          "irr": 1.587,
+          "ci_low": 1.583,
+          "ci_high": 1.591,
+          "pvalue": 0.0
+        },
+        "chronic_3plus": {
+          "irr": 2.083,
+          "ci_low": 2.078,
+          "ci_high": 2.089,
+          "pvalue": 0.0
+        }
+      }
+    },
+    "70-79": {
+      "n": 1653,
+      "coefficients": {
+        "chronic_1": {
+          "irr": 1.22,
+          "ci_low": 1.216,
+          "ci_high": 1.224,
+          "pvalue": 0.0
+        },
+        "chronic_2": {
+          "irr": 1.709,
+          "ci_low": 1.703,
+          "ci_high": 1.715,
+          "pvalue": 0.0
+        },
+        "chronic_3plus": {
+          "irr": 2.497,
+          "ci_low": 2.488,
+          "ci_high": 2.506,
+          "pvalue": 0.0
+        }
+      }
+    },
+    "80+": {
+      "n": 1009,
+      "coefficients": {
+        "chronic_1": {
+          "irr": 1.133,
+          "ci_low": 1.128,
+          "ci_high": 1.139,
+          "pvalue": 0.0
+        },
+        "chronic_2": {
+          "irr": 1.175,
+          "ci_low": 1.169,
+          "ci_high": 1.181,
+          "pvalue": 0.0
+        },
+        "chronic_3plus": {
+          "irr": 1.504,
+          "ci_low": 1.496,
+          "ci_high": 1.512,
+          "pvalue": 0.0
+        }
+      }
+    }
+  },
+  "alternative_exposures": {
+    "Diabetes": {
+      "irr": 1.464,
+      "ci_low": 1.462,
+      "ci_high": 1.466,
+      "pvalue": 0.0
+    },
+    "Hypertension": {
+      "irr": 1.374,
+      "ci_low": 1.373,
+      "ci_high": 1.376,
+      "pvalue": 0.0
+    },
+    "CVD": {
+      "irr": 1.73,
+      "ci_low": 1.728,
+      "ci_high": 1.733,
+      "pvalue": 0.0
+    },
+    "High Cholesterol": {
+      "irr": 1.071,
+      "ci_low": 1.07,
+      "ci_high": 1.073,
+      "pvalue": 0.0
+    },
+    "Any Chronic": {
+      "irr": 1.661,
+      "ci_low": 1.659,
+      "ci_high": 1.664,
+      "pvalue": 0.0
+    },
+    "Multimorbidity": {
+      "irr": 1.586,
+      "ci_low": 1.584,
+      "ci_high": 1.588,
+      "pvalue": 0.0
+    }
+  },
+  "missing_data": {
+    "complete_case_n": 4922,
+    "available_cases": {
+      "physical_health_days": 4922,
+      "chronic_count": 4922,
+      "age": 4922,
+      "race_ethnicity": 4922,
+      "education": 4912,
+      "poverty_ratio": 4542,
+      "smoking_status": 4922,
+      "bmi": 4680
+    }
+  },
+  "overdispersion": {
+    "pearson_chi2": 228933689.27,
+    "df_residual": 12796110,
+    "dispersion_ratio": 17.891,
+    "overdispersed": true
+  }
+}

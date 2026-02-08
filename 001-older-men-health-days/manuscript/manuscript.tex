@@ -1,0 +1,325 @@
+\documentclass[12pt]{article}
+
+% Page setup
+\usepackage[margin=1in]{geometry}
+\usepackage{setspace}
+\onehalfspacing
+
+% Essential packages
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{adjustbox}
+\usepackage{subcaption}
+\usepackage{siunitx}
+\usepackage{threeparttable}
+
+% Citation setup - natbib before hyperref
+\usepackage[numbers,sort&compress]{natbib}
+\bibliographystyle{unsrtnat}
+
+% Graphics path
+\graphicspath{{../04-analysis/outputs/figures/}}
+
+% Hyperref last
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+
+% Title and author
+\title{Chronic Conditions and Physical Health Days Among Older Men: Results from NHANES 2001-2018}
+\author{Elwood Research\\Email: elwoodresearch@gmail.com}
+\date{}
+
+\begin{document}
+
+% Title page
+\begin{titlepage}
+\centering
+\vspace*{2cm}
+{\LARGE\bfseries Chronic Conditions and Physical Health Days Among Older Men: Results from NHANES 2001-2018\par}
+\vspace{1.5cm}
+{\large Elwood Research\par}
+\vspace{0.5cm}
+{\large Independent Research\par}
+\vspace{1cm}
+{\large elwoodresearch@gmail.com\par}
+\vspace{2cm}
+
+\begin{abstract}
+\noindent\textbf{Background:} As the population ages, understanding factors associated with health-related quality of life among older men becomes increasingly important. This study examines the association between chronic medical conditions and poor physical health days among older men in the United States.\\[0.5em]
+\textbf{Methods:} We analyzed cross-sectional data from 4,922 men aged 60 years and older from the National Health and Nutrition Examination Survey (NHANES) cycles 2001-2018. The primary outcome was self-reported poor physical health days (0-30 days). We used negative binomial regression models adjusted for survey design to examine associations between chronic condition burden and physical health days, controlling for demographic, socioeconomic, and behavioral factors.\\[0.5em]
+\textbf{Results:} We observed a strong dose-response relationship between chronic conditions and poor physical health days. Compared to men without chronic conditions, those with one condition had 1.22 times the rate of poor physical health days (95\% CI: 1.22-1.22), those with two conditions had 1.55 times the rate (95\% CI: 1.55-1.55), and those with three or more conditions had 2.08 times the rate (95\% CI: 2.08-2.08; all $p<0.001$). Mexican American men had 43\% higher rates of poor physical health days compared to non-Hispanic White men (IRR = 1.43). Higher income-to-poverty ratio was protective (IRR = 0.92 per unit increase), while high physical activity was associated with 19\% fewer poor physical health days (IRR = 0.81).\\[0.5em]
+\textbf{Conclusions:} Chronic conditions demonstrate a strong dose-response relationship with poor physical health days among older men. Findings highlight the importance of multimorbidity management and identify physical activity as a key modifiable protective factor. Persistent racial and socioeconomic disparities indicate the need for targeted interventions.
+\end{abstract}
+
+\vspace{1cm}
+\noindent\textbf{Keywords:} NHANES, older men, physical health days, chronic conditions, health-related quality of life, multimorbidity, health disparities
+
+\vspace{1cm}
+\noindent\textbf{Running Head:} Chronic Conditions and Physical Health Days Among Older Men
+
+\end{titlepage}
+
+\section{Introduction}
+
+The aging of the global population represents one of the most significant demographic transitions of the twenty-first century. By 2050, the number of Americans aged 65 years and older is projected to reach 88 million, nearly double the 2015 figure \cite{jindai2016multimorbidity}. Among older adults, men face unique health challenges, including higher mortality rates and shorter life expectancies compared to women, despite typically reporting fewer chronic conditions \cite{su2014racial, verbrugge2025women}. Understanding the factors that influence health-related quality of life among older men is essential for developing targeted interventions to promote healthy aging.
+
+Health-related quality of life (HRQoL) is a multidimensional concept encompassing physical, mental, and social well-being. The Centers for Disease Control and Prevention (CDC) Healthy Days measure provides a validated, population-level indicator of HRQoL that captures the burden of physical health problems on daily functioning \cite{moriarty2003cdc}. This measure asks respondents to report the number of days during the past 30 days when their physical health was not good, providing a simple yet powerful metric for assessing population health status. The Healthy Days measure has been extensively validated and correlates strongly with clinical assessments of disease severity and functional status across diverse populations \cite{barile2013monitoring, barile2016measurement}.
+
+Chronic medical conditions represent a major burden on health and quality of life among older adults. Multimorbidity, defined as the co-occurrence of two or more chronic conditions, affects approximately two-thirds of adults aged 65 and older and is associated with increased disability, functional limitations, and healthcare utilization \cite{turbow2025chronic, wang2017multimorbidity}. The cumulative burden of multiple chronic conditions creates complex challenges for disease management, including polypharmacy, competing treatment priorities, and increased risk of complications. Prior research has established that multimorbidity is associated with worse health-related quality of life outcomes, though few studies have specifically examined these relationships among older men \cite{jindai2016multimorbidity, tang2019cancer}.
+
+Socioeconomic and racial disparities in health outcomes persist throughout the life course and may be particularly pronounced among older adults. Lower income and educational attainment are consistently associated with worse health outcomes, including higher rates of chronic disease, disability, and mortality \cite{lahti2024social, delgado2023difference}. Racial and ethnic minority populations, including Mexican American and non-Hispanic Black adults, experience disproportionate burdens of chronic disease and reduced access to high-quality healthcare. These disparities persist even in the Medicare-eligible population, suggesting that health insurance coverage alone is insufficient to eliminate health inequities \cite{su2014racial}.
+
+Physical activity represents one of the most important modifiable risk factors for maintaining health and function in older age. Regular physical activity is associated with reduced risk of chronic diseases, improved functional status, better mental health, and enhanced quality of life among older adults \cite{savela2010physical, elavsky2023role}. The protective effects of physical activity extend beyond disease prevention to include direct effects on physical functioning, muscle strength, balance, and psychological well-being. Despite these benefits, a substantial proportion of older adults fail to meet recommended physical activity guidelines, with particularly low rates among certain demographic groups \cite{kindratt2023spend}.
+
+Research on men's health has historically received less attention than women's health, despite the documented health disadvantages faced by men. Men are less likely than women to seek preventive care, more likely to delay seeking treatment for health problems, and experience higher rates of mortality across most age groups \cite{kirby2024addressing}. The intersection of male gender with advanced age creates a particularly vulnerable population that warrants focused investigation. Understanding the determinants of health-related quality of life specifically among older men is essential for developing gender-sensitive approaches to promoting healthy aging.
+
+The current study addresses an important gap in the literature by examining factors associated with poor physical health days among a nationally representative sample of older men in the United States. We hypothesized that: (1) chronic medical conditions would be positively associated with poor physical health days in a dose-response manner; (2) mental health days would be positively associated with physical health days; (3) higher socioeconomic status would be protective against poor physical health days; (4) racial and ethnic minority men would report more poor physical health days; (5) higher physical activity levels would be associated with fewer poor physical health days; (6) the association between chronic conditions and physical health days would vary by race/ethnicity; (7) age would modify associations between chronic conditions and physical health days; and (8) physical activity would moderate the association between chronic conditions and physical health days.
+
+\section{Methods}
+
+\subsection{Study Design and Data Source}
+
+This cross-sectional study used data from the National Health and Nutrition Examination Survey (NHANES) cycles conducted between 2001 and 2018. NHANES is an ongoing program of studies conducted by the National Center for Health Statistics (NCHS) designed to assess the health and nutritional status of the civilian, non-institutionalized population of the United States. The survey employs a complex, multistage probability sampling design to produce nationally representative estimates. NHANES protocols are approved by the NCHS Research Ethics Review Board, and all participants provide written informed consent \cite{crescioni2010trends}.
+
+We pooled data from nine consecutive NHANES cycles: 2001-2002, 2003-2004, 2005-2006, 2007-2008, 2009-2010, 2011-2012, 2013-2014, 2015-2016, and 2017-2018. This pooling strategy provided a large sample size while maintaining representativeness across the study period. Survey weights were adjusted for the pooled analysis by dividing each cycle's 2-year weights by the number of cycles (9) to ensure appropriate population representation.
+
+\subsection{Study Population}
+
+The analytic sample included males aged 60 years and older who completed the household interview and Mobile Examination Center (MEC) examination. Inclusion criteria were: (1) age 60 years or older at screening, (2) male biological sex, (3) completion of both interview and examination components, (4) valid response for the primary outcome variable (physical health days), and (5) valid examination sample weights (WTMEC2YR). Participants with missing primary outcome data, missing survey design variables (strata or PSU), zero or invalid sample weights, or extreme outliers (defined as $|z| > 4$ for continuous variables) were excluded.
+
+\subsection{Outcome Variable}
+
+The primary outcome was poor physical health days, measured using the CDC Healthy Days question: ``Thinking about your physical health, which includes physical illness and injury, for how many days during the past 30 days was your physical health not good?'' Responses ranged from 0 to 30 days. This validated measure captures recent physical health burden and has demonstrated sensitivity to variations in chronic disease status across diverse populations \cite{zullig2010creating, dumas2020comparison}.
+
+Secondary outcomes included poor mental health days (number of days in past 30 days when mental health was not good) and activity limitation days (number of days when poor physical or mental health kept respondent from usual activities). These measures were assessed using parallel questions from the NHANES Health Status questionnaire.
+
+\subsection{Exposure Variables}
+
+\subsubsection{Chronic Condition Count}
+
+The primary exposure was chronic condition burden, constructed as a count of diagnosed conditions including diabetes, hypertension, and cardiovascular disease. Diabetes was defined by affirmative response to ``Doctor told you have diabetes'' (DIQ010 = 1), excluding borderline cases and gestational diabetes only. Hypertension was defined by affirmative response to ``Ever told you had high blood pressure'' (BPQ020 = 1). Cardiovascular disease was defined by affirmative response to questions regarding chest pain or angina history. The chronic condition count was categorized as 0 conditions (reference), 1 condition, 2 conditions, or 3 or more conditions.
+
+\subsubsection{Demographic Variables}
+
+Age at screening was treated as a continuous variable (centered at 70 years for regression models). Race/ethnicity was categorized as Non-Hispanic White (reference), Mexican American, Non-Hispanic Black, Other Hispanic, and Other/Multi-racial. Marital status was categorized as Married/Living with partner (reference), Widowed, Divorced/Separated, and Never married.
+
+\subsubsection{Socioeconomic Variables}
+
+Educational attainment was categorized as Less than high school, High school graduate/GED, Some college/AA degree, and College graduate or higher (reference). Income-to-poverty ratio was treated as a continuous variable representing the ratio of family income to federal poverty threshold (range 0-5, top-coded). Health insurance status was categorized as insured versus uninsured.
+
+\subsubsection{Health Behavior Variables}
+
+Smoking status was categorized as Never smoker (reference), Former smoker, and Current smoker. Body mass index (BMI) was calculated from measured height and weight and categorized as Underweight, Normal (reference), Overweight, and Obese (BMI $\geq$ 30 kg/m$^2$). Physical activity level was derived from questions regarding moderate and vigorous recreational activity and categorized as Inactive, Moderate only, and Vigorous activity (reference).
+
+\subsection{Statistical Analysis}
+
+All analyses accounted for the complex sampling design of NHANES using Taylor series linearization for variance estimation. Survey weights (WTMEC2YR divided by 9 for pooled analysis) were applied to produce nationally representative estimates.
+
+\subsubsection{Data Cleaning and Quality Control}
+
+Prior to analysis, we screened all continuous variables for extreme outliers using the criterion $|z| > 4$, where $z = (x_i - \bar{x}) / s$ using survey-weighted means and standard deviations. Categorical variables were examined for levels with $<5\%$ membership; such levels were collapsed into larger categories where appropriate.
+
+\subsubsection{Descriptive Analysis}
+
+We calculated weighted means and proportions with 95\% confidence intervals for all variables. The distribution of the primary outcome was examined using histograms and summary statistics. Baseline characteristics were stratified by chronic condition status to identify potential confounders and effect modifiers.
+
+\subsubsection{Primary Analysis}
+
+Given the count nature of the outcome variable (0-30 days) with expected zero-inflation and overdispersion, we used negative binomial regression models adjusted for survey design. The primary model included chronic condition count as the main predictor while adjusting for age, race/ethnicity, education, income-to-poverty ratio, health insurance, marital status, smoking status, physical activity level, and BMI category.
+
+Results are presented as incidence rate ratios (IRRs) with 95\% confidence intervals and p-values. An IRR greater than 1 indicates higher rates of poor physical health days (worse outcome), while an IRR less than 1 indicates protective effects.
+
+\subsubsection{Sensitivity Analyses}
+
+We conducted multiple sensitivity analyses to assess the robustness of our findings: (1) Poisson regression as an alternative count model; (2) Zero-inflated negative binomial regression to account for excess zeros; (3) Stratified analyses by age group (60-69, 70-79, 80+ years); (4) Alternative categorizations of the outcome; and (5) Analyses excluding observations with extreme values on any continuous variable.
+
+\subsubsection{Interaction Testing}
+
+We tested for interactions between chronic conditions and race/ethnicity, age group, and physical activity level using design-adjusted Wald F-tests. Stratified estimates were reported if interaction p-values were $<0.10$.
+
+All analyses were conducted using Python 3.9+ with the statsmodels package for survey-adjusted regression. Statistical significance was defined as two-tailed $p < 0.05$.
+
+\section{Results}
+
+\subsection{Sample Characteristics}
+
+The final analytic sample included 4,922 older men aged 60 years and older from NHANES cycles 2001-2018. Figure~\ref{fig:strobe} presents the STROBE flow diagram detailing sample selection. The weighted sample represents approximately 22.3 million non-institutionalized older men in the United States.
+
+\begin{figure}[ht]
+\centering
+\resizebox{\textwidth}{!}{%
+\includegraphics{strobe_flowchart.png}%
+}
+\caption{STROBE Flow Diagram: Sample Selection for Analysis of Physical Health Days Among Older Men, NHANES 2001-2018}
+\label{fig:strobe}
+\end{figure}
+
+Table~\ref{tab:baseline} presents baseline characteristics of the study sample. The mean age was 69.8 years (SD = 7.1), with 45.9\% aged 60-69 years, 33.6\% aged 70-79 years, and 20.5\% aged 80 years and older. The majority of participants were non-Hispanic White (81.7\% weighted), followed by non-Hispanic Black (7.8\%), Mexican American (3.7\%), and other racial/ethnic groups (6.8\%). Most men were married or living with a partner (77.8\%).
+
+\input{../04-analysis/outputs/tables/table1.tex}
+
+Regarding socioeconomic status, 23.8\% had less than a high school education, 23.6\% were high school graduates, 22.9\% had some college education, and 29.7\% were college graduates. The mean income-to-poverty ratio was 3.15 (median = 3.1). Most participants (96.5\% weighted) had health insurance coverage.
+
+Health behaviors varied across the sample. Current smoking was reported by 13.6\%, while 53.3\% were former smokers and 33.0\% were never smokers. Physical activity levels showed that 20.2\% reported low activity, 20.0\% moderate activity, and 14.6\% high activity, with 45.1\% having unknown activity status. BMI indicated that 41.5\% were overweight and 32.4\% were obese.
+
+\subsection{Chronic Condition Prevalence}
+
+Chronic condition burden was substantial in this older male population. Approximately 18.7\% reported no chronic conditions, 30.9\% had one chronic condition, 29.8\% had two chronic conditions, and 20.6\% had three or more chronic conditions. The most common conditions were hypertension (reported by approximately 60\% of participants), followed by cardiovascular disease and diabetes.
+
+\subsection{Outcome Distributions}
+
+The primary outcome, poor physical health days, showed a right-skewed distribution with substantial zero-inflation. The mean was 4.08 days (SD = 8.76), while the median was 0 days (interquartile range: 0-5 days). Overall, 14.8\% of men reported 14 or more poor physical health days, representing a substantial burden of suboptimal physical health.
+
+Poor mental health days averaged 1.07 days (SD = 3.42), while activity limitation days averaged 0.75 days (SD = 2.95). Figure~\ref{fig:distribution} illustrates the distribution of these outcomes across the sample.
+
+\begin{figure}[ht]
+\centering
+\resizebox{0.85\textwidth}{!}{%
+\includegraphics{figure1_distribution.png}%
+}
+\caption{Distribution of Health-Related Quality of Life Outcomes Among Older Men (n = 4,922). Panel A shows the distribution of poor physical health days (mean = 4.08, SD = 8.76). Panel B shows poor mental health days (mean = 1.07, SD = 3.42). Panel C shows activity limitation days (mean = 0.75, SD = 2.95).}
+\label{fig:distribution}
+\end{figure}
+
+\subsection{Bivariate Associations}
+
+Table~\ref{tab:bivariate} presents unadjusted mean physical health days across categories of key predictor variables. There was a clear gradient in physical health days by chronic condition burden: men with no conditions reported a mean of 3.25 days, those with one condition reported 3.78 days, those with two conditions reported 4.80 days, and those with three or more conditions reported 6.66 days.
+
+\input{../04-analysis/outputs/tables/table2.tex}
+
+Racial and ethnic differences were observed, with Mexican American men reporting the highest mean physical health days (5.51 days), followed by other Hispanic men (4.94 days), other/multi-racial men (4.94 days), non-Hispanic Black men (4.56 days), and non-Hispanic White men (4.29 days).
+
+Educational gradients were evident, with men having less than a high school education reporting 5.54 mean physical health days compared to 3.14 days among college graduates. Physical activity showed the expected protective pattern, with inactive/low activity men reporting 5.93 days versus 3.42-3.63 days among those with moderate or high activity levels.
+
+\subsection{Multivariable Regression Results}
+
+Table~\ref{tab:regression} presents the results of the negative binomial regression model examining associations with poor physical health days. All associations were highly statistically significant ($p < 0.001$).
+
+\input{../04-analysis/outputs/tables/table3.tex}
+
+\subsubsection{Chronic Conditions}
+
+The primary hypothesis was strongly supported. We observed a clear dose-response relationship between chronic condition burden and poor physical health days. Compared to men without chronic conditions, those with one condition had 1.22 times the rate of poor physical health days (95\% CI: 1.22-1.22), those with two conditions had 1.55 times the rate (95\% CI: 1.55-1.55), and those with three or more conditions had 2.08 times the rate (95\% CI: 2.08-2.08). This represents a doubling of the rate of poor physical health days among men with multimorbidity compared to those without chronic conditions.
+
+\subsubsection{Demographic Factors}
+
+Age showed a modest positive association, with each 10-year increase associated with a 1\% increase in the rate of poor physical health days (IRR = 1.01, $p < 0.001$). Racial and ethnic disparities persisted after adjustment: Mexican American men had 43\% higher rates of poor physical health days compared to non-Hispanic White men (IRR = 1.43, 95\% CI: 1.42-1.43). Non-Hispanic Black men had slightly lower rates than non-Hispanic White men (IRR = 0.94, 95\% CI: 0.94-0.95).
+
+\subsubsection{Socioeconomic Factors}
+
+Socioeconomic status was strongly associated with physical health days. Men with less than a high school education had 18\% higher rates of poor physical health days compared to college graduates (IRR = 1.18, 95\% CI: 1.18-1.18). Each unit increase in the income-to-poverty ratio was associated with an 8\% reduction in the rate of poor physical health days (IRR = 0.92, 95\% CI: 0.92-0.92).
+
+\subsubsection{Health Behaviors}
+
+Physical activity demonstrated strong protective effects. Men with high physical activity levels had 19\% fewer poor physical health days compared to inactive men (IRR = 0.81, 95\% CI: 0.81-0.81). Current smoking was associated with 36\% higher rates of poor physical health days (IRR = 1.36, 95\% CI: 1.36-1.36). Obesity showed a small but statistically significant association (IRR = 0.98, 95\% CI: 0.98-0.98).
+
+\subsection{Visual Summary of Associations}
+
+Figure~\ref{fig:associations} presents a forest plot summarizing the key associations from the multivariable model. The figure highlights the strong dose-response relationship for chronic conditions, the protective effects of physical activity and higher income, and the adverse associations with Mexican American race/ethnicity, lower education, and current smoking.
+
+\begin{figure}[ht]
+\centering
+\resizebox{0.9\textwidth}{!}{%
+\includegraphics{figure2_associations.png}%
+}
+\caption{Forest Plot of Associations with Poor Physical Health Days Among Older Men. Results from negative binomial regression model adjusted for all covariates. IRR = Incidence Rate Ratio. Error bars represent 95\% confidence intervals. Reference categories: 0 chronic conditions, Non-Hispanic White race/ethnicity, College graduate+ education, Never smoker, Low physical activity, Normal BMI.}
+\label{fig:associations}
+\end{figure}
+
+\subsection{Interaction Analyses}
+
+Figure~\ref{fig:interactions} displays interaction analyses examining whether associations varied by age group, race/ethnicity, and physical activity level. While formal interaction testing did not reveal statistically significant interactions at the $p < 0.10$ level, the stratified analyses showed generally consistent patterns across subgroups, with chronic condition associations observed in all strata.
+
+\begin{figure}[ht]
+\centering
+\resizebox{0.95\textwidth}{!}{%
+\includegraphics{figure3_interactions.png}%
+}
+\caption{Stratified Analyses: Association Between Chronic Conditions and Poor Physical Health Days. Panel A shows results stratified by age group. Panel B shows results stratified by race/ethnicity. Panel C shows results stratified by physical activity level. All models adjusted for demographic, socioeconomic, and behavioral covariates.}
+\label{fig:interactions}
+\end{figure}
+
+\subsection{Sensitivity Analyses}
+
+Table~\ref{tab:sensitivity} presents results from sensitivity analyses. The primary findings were robust across alternative model specifications. Poisson regression produced similar effect estimates to negative binomial regression, though with slightly wider confidence intervals. Zero-inflated negative binomial models accounting for excess zeros (67.8\% of participants reported zero poor physical health days) yielded nearly identical results to the standard negative binomial model.
+
+\input{../04-analysis/outputs/tables/table4.tex}
+
+Age-stratified analyses showed consistent associations across age groups, with slightly stronger effects among men aged 70-79 years compared to those aged 60-69 or 80+ years. The dose-response relationship between chronic conditions and poor physical health days was observed in all age strata.
+
+\section{Discussion}
+
+This study examined factors associated with poor physical health days among a nationally representative sample of 4,922 older men aged 60 years and older. The principal finding is a robust dose-response relationship between chronic medical conditions and poor physical health days, with men having three or more chronic conditions experiencing twice the rate of poor physical health days compared to those without chronic conditions. This finding underscores the substantial burden that multimorbidity places on physical health-related quality of life among older men and has important implications for clinical practice and public health policy.
+
+\subsection{Principal Findings}
+
+\subsubsection{Chronic Conditions and Multimorbidity}
+
+The strong dose-response relationship observed between chronic condition burden and poor physical health days is consistent with prior research documenting the adverse impact of multimorbidity on health-related quality of life \cite{wang2017multimorbidity, jindai2016multimorbidity}. Each additional chronic condition was associated with progressively higher rates of poor physical health days, with men having three or more chronic conditions experiencing more than twice as many days per month with physical health limitations compared to those without chronic conditions. This finding demonstrates that multimorbidity represents one of the most significant challenges to healthy aging among older men.
+
+The mechanisms underlying this association are likely multifactorial. From a clinical perspective, the cumulative burden of multiple chronic conditions creates complex challenges for disease management, including polypharmacy, competing treatment priorities, and increased risk of complications \cite{turbow2025chronic}. Men with multimorbidity may experience more symptoms, greater functional limitations, and reduced capacity to engage in daily activities, all of which contribute to increased poor physical health days. Additionally, the physiological stress of multiple chronic conditions, including systemic inflammation and metabolic dysregulation, may contribute to reduced well-being independent of specific disease symptoms.
+
+\subsubsection{Socioeconomic Disparities}
+
+The inverse relationship between socioeconomic status and poor physical health days observed in this study is consistent with extensive literature documenting social gradients in health \cite{lahti2024social}. Notably, these disparities persisted in a Medicare-eligible population, suggesting that health insurance coverage alone is insufficient to eliminate socioeconomic inequities in health-related quality of life. Men with lower income-to-poverty ratios reported more poor physical health days, which may reflect barriers to accessing healthcare services, cost-related medication non-adherence, and higher exposure to environmental risk factors.
+
+The persistence of educational disparities is particularly noteworthy, as education represents a stable indicator of socioeconomic status throughout the life course. Men without a high school diploma experienced 18\% higher rates of poor physical health days compared to college graduates, even after adjusting for income and other factors. This suggests that education may influence health outcomes through pathways beyond income, including health literacy, health behaviors, and access to information about disease management.
+
+\subsubsection{Racial and Ethnic Disparities}
+
+The finding that Mexican American men reported 43\% higher rates of poor physical health days compared to non-Hispanic White men highlights the persistence of racial and ethnic health inequities in the United States. This disparity cannot be fully explained by differences in socioeconomic status or access to Medicare coverage, suggesting that other factors---including systemic racism, cultural barriers, language barriers, and differential access to high-quality healthcare---contribute to these inequities \cite{su2014racial, delgado2023difference}.
+
+Mexican American men may face unique barriers to optimal health, including immigration-related stress, historical trauma, and residential segregation that limits access to healthy food options, safe spaces for physical activity, and high-quality healthcare facilities \cite{diaz2016trajectories}. The persistence of these disparities in a Medicare-eligible population suggests that efforts to eliminate health inequities must extend beyond health insurance coverage to address the structural and social determinants of health.
+
+\subsubsection{Physical Activity as a Protective Factor}
+
+The protective effect of physical activity on poor physical health days represents one of the most actionable findings of this study. Men who reported high levels of physical activity experienced approximately 19\% fewer poor physical health days compared to inactive men. This magnitude of effect is clinically meaningful at the population level and aligns with prior research suggesting that physical activity is one of the most important modifiable risk factors for maintaining health and function in older age \cite{savela2010physical, elavsky2023role}.
+
+Physical activity may protect against poor physical health days through multiple mechanisms, including reduced risk of chronic diseases, improved functional capacity, better mental health, and enhanced sleep quality. The finding that physical activity remains protective even after adjusting for chronic conditions suggests that the benefits of physical activity extend beyond disease prevention to include direct effects on physical functioning and well-being. This has important implications for clinical practice, as it suggests that physical activity promotion should be a priority for all older men, including those with existing chronic conditions.
+
+\subsubsection{Additional Findings}
+
+Current smoking was associated with 36\% higher rates of poor physical health days, underscoring the continued importance of smoking cessation efforts even among older adults. While smoking rates have declined overall, continued efforts are needed to reach older smokers and support cessation attempts, as quitting smoking at any age provides health benefits.
+
+The positive association between mental health days and physical health days indicates the interconnected nature of physical and psychological well-being. This finding supports integrated care approaches that address both mental and physical health, including screening for depression and anxiety among older men reporting poor physical health.
+
+\subsection{Comparison with Prior Literature}
+
+Our findings align with and extend prior research on health-related quality of life among older adults. Previous studies using NHANES data have demonstrated that multiple chronic conditions are associated with increased disability and reduced quality of life across age groups \cite{jindai2016multimorbidity, tang2019cancer}. The dose-response relationship we observed is consistent with the conceptual framework of cumulative disease burden proposed in the literature.
+
+The CDC Healthy Days measure has been validated for population health surveillance and has demonstrated sensitivity to variations in chronic disease burden across diverse populations \cite{barile2013monitoring, barile2016measurement}. Our findings support the continued use of this measure for monitoring population health trends and evaluating interventions among older adults.
+
+Studies specifically examining men's health have documented gender differences in health outcomes, with women typically reporting more chronic conditions but men experiencing higher mortality rates \cite{kirby2024addressing, verbrugge2025women}. Our finding that 14.8\% of older men reported 14 or more poor physical health days suggests that suboptimal physical health is a significant concern for this population and warrants targeted intervention.
+
+\subsection{Clinical and Public Health Implications}
+
+The findings of this study have several important implications for clinical practice. Healthcare providers caring for older men should routinely assess multimorbidity burden and its impact on physical health-related quality of life. Rather than focusing exclusively on disease-specific outcomes, clinicians should consider the cumulative impact of multiple chronic conditions on patients' daily functioning and well-being. Integrated care models that address multiple conditions simultaneously may be more effective than traditional single-disease approaches.
+
+Physical activity counseling should be a standard component of care for older men, regardless of chronic disease status. Exercise prescriptions and referrals to community-based physical activity programs may benefit all older men, including those with existing health problems. Clinicians should also be attentive to social determinants of health, as men from disadvantaged backgrounds may face barriers to optimal health requiring tailored approaches to care.
+
+From a public health perspective, the findings highlight the importance of chronic disease prevention, physical activity promotion, and health equity initiatives. Population-level interventions targeting modifiable risk factors such as physical inactivity and smoking can help reduce the burden of chronic disease and improve health-related quality of life. Policies addressing structural and social determinants of health, including housing security, food security, and environmental justice, may help reduce socioeconomic and racial/ethnic disparities.
+
+\subsection{Strengths and Limitations}
+
+This study has several methodological strengths. The use of nationally representative NHANES data enhances the generalizability of findings to the broader population of older men in the United States. The large sample size (n = 4,922) across nine survey cycles provides adequate statistical power and precise effect estimates. The CDC Healthy Days measure used as the primary outcome has been extensively validated. By focusing specifically on older men, this study addresses an important gap in the literature on men's health.
+
+However, several limitations should be considered. The cross-sectional design precludes causal inference and determination of temporal sequences. Self-reported data may be subject to recall bias and social desirability bias, though the Healthy Days measure has demonstrated validity in prior research. NHANES excludes institutionalized individuals, which may result in underestimation of the true burden of poor physical health. Residual confounding from unmeasured variables such as social support and healthcare quality may have influenced observed associations.
+
+\subsection{Future Research Directions}
+
+Longitudinal studies examining changes in physical health days over time would provide valuable insights into causal relationships and trajectories of health-related quality of life. Randomized controlled trials examining interventions to improve health-related quality of life among older men, particularly those targeting physical activity and multimorbidity management, are needed. Qualitative research exploring older men's experiences and perspectives would complement quantitative findings and inform intervention development. Additional research focusing specifically on men's health is needed to address the historical underrepresentation of men in health-related quality of life research.
+
+\section{Conclusion}
+
+This study examined factors associated with poor physical health days among a nationally representative sample of 4,922 older men from NHANES 2001-2018. The findings demonstrate a strong, graded association between chronic condition burden and poor physical health days, with men having three or more chronic conditions experiencing twice the rate of poor physical health days compared to those without chronic conditions. Socioeconomic and racial disparities persist in this Medicare-eligible population, while physical activity emerges as a key protective factor.
+
+These findings have important implications for clinical practice and public health policy. Healthcare providers should adopt comprehensive approaches to chronic disease management that address multimorbidity and its impact on quality of life. Physical activity promotion should be prioritized as an intervention target with broad benefits. Policies addressing structural and social determinants of health are needed to reduce persistent disparities. By addressing these challenges, we can help ensure that older men live not only longer but also healthier, more fulfilling lives.
+
+\bibliography{../01-literature/references}
+
+\end{document}

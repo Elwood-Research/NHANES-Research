@@ -1,0 +1,9 @@
+{
+  "initial_records": 91351,
+  "after_age_filter": 17253,
+  "after_sex_filter": 8459,
+  "with_outcome_data": 4922,
+  "final_analytic_sample": 4922,
+  "outliers_removed": 435,
+  "missing_covariates": 0
+}
