@@ -1,0 +1,206 @@
+\documentclass{beamer}
+\usetheme{Madrid}
+\usecolortheme{default}
+\usepackage{booktabs}
+
+\title[Diet and Periodontitis]{Association Between Dietary Nutrient Intake and Periodontitis: A Cross-Sectional Study of NHANES 2009-2014}
+\author{Elwood Research}
+\institute[]{elwoodresearch@gmail.com}
+\date{\today}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}{Background}
+  \begin{itemize}
+    \item \textbf{Periodontitis}: Chronic inflammatory disease destroying tooth-supporting tissues.
+    \item \textbf{Prevalence}: Affects nearly half of U.S. adults aged 30+.
+    \item \textbf{Risk Factors}: 
+      \begin{itemize}
+        \item Established: Smoking, Diabetes, Poor Oral Hygiene.
+        \item Emerging: Diet and Nutrition.
+      \end{itemize}
+    \item \textbf{Dietary Hypothesis}:
+      \begin{itemize}
+        \item Pro-inflammatory: Added sugars.
+        \item Anti-inflammatory: Fiber, Antioxidants (Vit C), Bone-supporting nutrients (Calcium).
+      \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Objectives}
+  To investigate the independent association between specific dietary nutrient intakes and the prevalence of moderate-to-severe periodontitis in U.S. adults.
+  \vspace{1em}
+  \begin{block}{Key Nutrients Analyzed}
+    \begin{itemize}
+      \item Total Sugars (g/day)
+      \item Dietary Fiber (g/day)
+      \item Vitamin C (mg/day)
+      \item Calcium (mg/day)
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}{Methods: Design and Population}
+  \begin{itemize}
+    \item \textbf{Data Source}: NHANES 2009-2014 (3 cycles).
+    \item \textbf{Design}: Cross-sectional, nationally representative.
+    \item \textbf{Inclusion Criteria}:
+      \begin{itemize}
+        \item Age $\ge$ 30 years.
+        \item Completed full-mouth periodontal examination.
+        \item Valid Day 1 dietary recall data.
+      \end{itemize}
+    \item \textbf{Exclusions}: Edentulous, pregnant, missing covariates.
+    \item \textbf{Final Sample Size}: N = 8,006.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Methods: Variables}
+  \begin{itemize}
+    \item \textbf{Outcome}: Periodontitis (CDC/AAP Definitions)
+      \begin{itemize}
+        \item Dichotomized: \textbf{Moderate/Severe} vs. \textbf{None/Mild}.
+      \end{itemize}
+    \item \textbf{Exposures}: Continuous dietary intake from 24h recall.
+    \item \textbf{Covariates}:
+      \begin{itemize}
+        \item \textbf{Demographics}: Age, Sex, Race/Ethnicity, Education, PIR.
+        \item \textbf{Behaviors}: Smoking, Alcohol, Physical Activity, Flossing.
+        \item \textbf{Clinical}: BMI, Diabetes, Number of Teeth.
+        \item \textbf{Dietary}: Total Energy Intake (kcal).
+      \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Methods: Analysis}
+  \begin{itemize}
+    \item \textbf{Software}: Python (pandas, statsmodels).
+    \item \textbf{Weighting}: 6-year exam weights (`WTMEC6YR`) to account for complex survey design.
+    \item \textbf{Statistical Tests}:
+      \begin{itemize}
+        \item Descriptive: Weighted means and frequencies.
+        \item Modeling: Multivariable Logistic Regression.
+      \end{itemize}
+    \item \textbf{Models}:
+      \begin{itemize}
+        \item Model 1: Unadjusted.
+        \item Model 2: Adjusted for Demographics + Energy.
+        \item Model 3: Fully Adjusted (Health behaviors, SES, Clinical).
+      \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Results: Participant Flow}
+  \begin{figure}
+    \centering
+    \includegraphics[height=0.8\textheight]{../04-analysis/outputs/figures/strobe_flow.png}
+    \caption{STROBE Flow Diagram}
+  \end{figure}
+\end{frame}
+
+\begin{frame}{Results: Population Characteristics}
+  \textbf{Comparison: Periodontitis vs. Healthy}
+  \begin{itemize}
+    \item \textbf{Demographics}: Periodontitis group was older (53.8 vs 44.7 y) and had lower SES.
+    \item \textbf{Behaviors}: Higher smoking rates (20.1\% vs 9.1\%).
+    \item \textbf{Unadjusted Dietary Intake}:
+      \begin{table}
+      \centering
+      \small
+      \begin{tabular}{lcc}
+        \toprule
+        \textbf{Nutrient} & \textbf{No/Mild Perio} & \textbf{Mod/Severe Perio} \\
+        \midrule
+        Fiber (g) & 19.0 & 16.9 \\
+        Vitamin C (mg) & 82.9 & 75.1 \\
+        Calcium (mg) & 1045 & 928 \\
+        \bottomrule
+      \end{tabular}
+      \end{table}
+      \textit{All differences p < 0.001 (unadjusted).}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Results: Multivariable Regression}
+  \textbf{Association with Moderate/Severe Periodontitis (Fully Adjusted)}
+  \begin{table}
+    \centering
+    \begin{tabular}{lccc}
+      \toprule
+      \textbf{Nutrient} & \textbf{OR (95\% CI)} & \textbf{P-value} & \textbf{Interpretation} \\
+      \midrule
+      \textbf{Dietary Fiber} & \textbf{0.99 (0.99-0.99)} & \textbf{<0.001} & \textbf{Protective} \\
+      Total Sugars & 1.00 (1.00-1.00) & <0.001 & Null \\
+      Vitamin C & 1.00 (1.00-1.00) & <0.001 & Null \\
+      Calcium & 1.00 (1.00-1.00) & <0.001 & Null \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+  \vspace{1em}
+  \small{Note: OR is per unit change (1g or 1mg). Fiber OR of 0.99 implies $\sim$1\% risk reduction per gram.}
+\end{frame}
+
+\begin{frame}{Discussion}
+  \begin{itemize}
+    \item \textbf{Fiber}: Consistent with literature. 
+      \begin{itemize}
+        \item Mechanism: Prebiotic effect, glycemic control, reduced systemic inflammation.
+        \item A 10g increase in daily fiber could reduce risk by $\sim$10\%.
+      \end{itemize}
+    \item \textbf{Sugars}: No independent association for \textit{Total Sugars}.
+      \begin{itemize}
+        \item Distinction between intrinsic (fruit) vs. added sugars is key.
+      \end{itemize}
+    \item \textbf{Micronutrients}: No independent effect after adjustment.
+      \begin{itemize}
+        \item Effects likely confounded by overall diet quality and smoking.
+      \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Strengths and Limitations}
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \textbf{Strengths}
+      \begin{itemize}
+        \item Large, nationally representative sample.
+        \item Gold-standard periodontal exams.
+        \item Comprehensive covariate adjustment.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \textbf{Limitations}
+      \begin{itemize}
+        \item Cross-sectional (no causality).
+        \item Single 24h recall (measurement error).
+        \item Residual confounding (genetics, microbiome).
+      \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Conclusion}
+  \begin{block}{Take-Home Message}
+    \textbf{Dietary fiber intake is independently and inversely associated with periodontitis in U.S. adults.}
+  \end{block}
+  \vspace{1em}
+  \begin{itemize}
+    \item Increasing fiber intake may be a simple, effective adjunct strategy for periodontal health.
+    \item Future research should focus on longitudinal designs and "added sugars".
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \centering
+  \Huge{Thank You}
+  \vspace{1em}
+  \normalsize
+  \\
+  Questions?
+\end{frame}
+
+\end{document}

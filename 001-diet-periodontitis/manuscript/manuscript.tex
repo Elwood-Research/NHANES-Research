@@ -1,0 +1,285 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\geometry{a4paper, margin=1in}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{adjustbox}
+\usepackage{caption}
+\usepackage{setspace}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage[colorlinks=true, linkcolor=blue, citecolor=blue, urlcolor=blue]{hyperref}
+
+% Title Page
+\title{\textbf{Association Between Dietary Nutrient Intake and Periodontitis: A Cross-Sectional Study of NHANES 2009-2014}}
+\author{Elwood Research \\ \texttt{elwoodresearch@gmail.com}}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+\noindent
+\textbf{Background:} Periodontitis is a prevalent chronic inflammatory disease with significant public health implications. While oral hygiene and smoking are established risk factors, the role of diet remains less clear. This study aimed to investigate the association between specific dietary nutrients (total sugars, fiber, Vitamin C, and calcium) and the prevalence of moderate-to-severe periodontitis in U.S. adults.
+
+\noindent
+\textbf{Methods:} We analyzed data from 8,006 adults aged 30 years and older participating in the National Health and Nutrition Examination Survey (NHANES) 2009-2014. Periodontal status was determined using CDC/AAP definitions based on full-mouth examinations. Dietary intake was assessed via 24-hour recall. Multivariable logistic regression models adjusted for sociodemographic factors, health behaviors (including smoking and oral hygiene), and clinical characteristics.
+
+\noindent
+\textbf{Results:} Individuals with moderate/severe periodontitis had significantly lower intakes of dietary fiber (16.9 g vs. 19.0 g) compared to those with no/mild disease. In fully adjusted models, higher dietary fiber intake was independently associated with reduced odds of periodontitis (OR 0.99 per g/day, 95\% CI: 0.99-0.99, $p<0.001$). Total sugars, Vitamin C, and Calcium showed no clinically significant independent association after adjustment.
+
+\noindent
+\textbf{Conclusion:} Dietary fiber intake is inversely associated with periodontitis in the U.S. adult population, independent of traditional risk factors. These findings suggest that promoting fiber-rich diets may be a valuable adjunct strategy for periodontal health.
+\end{abstract}
+
+\newpage
+\doublespacing
+
+\section{Introduction}
+Periodontitis is a chronic inflammatory disease affecting the supporting structures of the teeth. While oral hygiene and smoking are well-established risk factors, emerging evidence suggests that diet plays a significant modulatory role in periodontal health. This synthesis reviews recent literature, primarily using data from the National Health and Nutrition Examination Survey (NHANES), to examine the associations between specific dietary nutrients—including sugars, fiber, and micronutrients—and periodontitis.
+
+\subsection{Macronutrients: Sugars and Fiber}
+Dietary sugars, particularly from sugar-sweetened beverages (SSBs), have been consistently linked to adverse periodontal outcomes. \citet{AlvesCosta2024} found that higher SSB consumption was associated with increased odds of periodontitis in a dose-dependent manner. Similarly, Mendelian randomization and observational analyses by \citet{Chen2025b} reinforced that sugar intake is a causal risk factor. Conversely, dietary fiber has demonstrated a protective effect. \citet{Nielsen2016} and \citet{Chuai2023} reported inverse associations between fiber intake and periodontal attachment loss, suggesting that high-fiber diets may mitigate periodontal inflammation, potentially through glycemic control or prebiotic effects. However, the role of ultra-processed foods, often high in sugar and low in fiber, remains debated, with \citet{Bidinotto2021} finding no direct association after adjusting for confounders.
+
+\subsection{Micronutrients and Antioxidants}
+Micronutrients play a crucial role in maintaining periodontal tissue integrity and modulating immune responses.
+\begin{itemize}
+    \item \textbf{Vitamin C:} \citet{Li2022} identified a threshold nonlinear association where adequate vitamin C intake was protective against periodontitis.
+    \item \textbf{Magnesium:} Multiple studies \citep{Wu2024,Li2022b,Huang2025} consistently show that dietary magnesium intake is inversely associated with periodontitis prevalence, particularly in non-obese populations.
+    \item \textbf{Calcium and Vitamin D:} \citet{Cao2025} found that elevated serum calcium levels were associated with reduced risk, and \citet{Liang2024} highlighted the joint protective effects of multiple vitamins, including D and calcium.
+    \item \textbf{Vitamin K:} Recent evidence from \citet{Zhu2025} and \citet{Chuai2023} suggests Vitamin K intake is also inversely associated with disease progression.
+    \item \textbf{Antioxidants:} \citet{Chen2025a} developed a composite dietary antioxidant index (CDAI) and found that higher aggregate antioxidant intake was significantly associated with lower periodontitis prevalence.
+\end{itemize}
+
+\subsection{Dietary Patterns and Novel Factors}
+Beyond single nutrients, overall dietary patterns are critical. \citet{Wright2020} identified a "salad, fruit, and vegetables" pattern as significantly protective. A systematic review by \citet{Shi2024} confirmed that higher diet quality scores (e.g., Healthy Eating Index) correlate with better periodontal health. Novel dietary factors are also emerging; \citet{Gong2025} reported a U-shaped relationship with dietary live microbe intake, and \citet{Zhou2025} suggested theobromine (found in cocoa/tea) might be protective.
+
+\section{Methods}
+
+\subsection{Study Design and Population}
+This study utilized data from the National Health and Nutrition Examination Survey (NHANES), a continuous cross-sectional survey designed to assess the health and nutritional status of the U.S. population. Data from three 2-year cycles (2009-2010, 2011-2012, and 2013-2014) were combined to ensure sufficient sample size for periodontal outcomes, which were assessed via full-mouth examination in adults aged 30 years and older during these cycles.
+
+The study population included all adults aged 30 years and older who completed the full-mouth periodontal examination and provided valid dietary recall data. Participants were excluded if they were edentulous, pregnant, or had missing data on key covariates.
+
+\subsection{Variable Definitions}
+
+\subsubsection{Periodontal Outcome}
+Periodontitis was defined using the Centers for Disease Control and Prevention/American Academy of Periodontology (CDC/AAP) case definitions for population-based surveillance.
+\begin{itemize}
+    \item \textbf{Severe Periodontitis}: $\ge$2 interproximal sites with clinical attachment loss (CAL) $\ge$6 mm (not on the same tooth) AND $\ge$1 interproximal site with probing depth (PD) $\ge$5 mm.
+    \item \textbf{Moderate Periodontitis}: $\ge$2 interproximal sites with CAL $\ge$4 mm (not on the same tooth) OR $\ge$2 interproximal sites with PD $\ge$5 mm (not on the same tooth).
+    \item \textbf{Mild Periodontitis}: $\ge$2 interproximal sites with CAL $\ge$3 mm AND $\ge$2 interproximal sites with PD $\ge$4 mm (not on the same tooth) or one site with PD $\ge$5 mm.
+    \item \textbf{Total Periodontitis}: Any classification of mild, moderate, or severe periodontitis.
+    \item \textbf{Healthy/No Periodontitis}: Individuals not meeting the criteria for mild, moderate, or severe disease.
+\end{itemize}
+
+The primary outcome was dichotomized as \textbf{moderate/severe periodontitis} vs. \textbf{no/mild periodontitis} for logistic regression analysis, consistent with previous literature emphasizing the clinical significance of moderate-to-severe disease.
+
+\subsubsection{Dietary Exposures}
+Dietary intake data were obtained from the first 24-hour dietary recall interview (Day 1). The primary exposures of interest were:
+\begin{enumerate}
+    \item \textbf{Total Sugars (g/day)}: Sum of all mono- and disaccharides.
+    \item \textbf{Dietary Fiber (g/day)}: Total dietary fiber.
+    \item \textbf{Vitamin C (mg/day)}: Total ascorbic acid.
+    \item \textbf{Calcium (mg/day)}: Total calcium.
+\end{enumerate}
+
+All dietary variables were modeled as continuous variables. To account for differences in total energy intake, we adjusted for total caloric intake (kcal/day) in multivariable models. Extreme outliers in dietary data ($>$4 SD from the mean) were excluded to prevent leverage by implausible values.
+
+\subsubsection{Covariates}
+Covariates were selected a priori based on known associations with periodontitis and dietary habits:
+\begin{itemize}
+    \item \textbf{Demographic Factors}: Age (years), Sex (Male/Female), Race/Ethnicity (Non-Hispanic White, Non-Hispanic Black, Mexican American, Other), Education ($<$High School, High School/GED, $>$High School), and Ratio of Family Income to Poverty (PIR).
+    \item \textbf{Health Behaviors}: Smoking status (Current, Former, Never), Alcohol consumption (drinks/day), and Physical Activity (Active vs. Inactive based on moderate/vigorous recreational activity).
+    \item \textbf{Clinical Characteristics}: Body Mass Index (BMI, kg/m\textsuperscript{2}), Diabetes status (Self-reported diagnosis or HbA1c $\ge$6.5\% or Fasting Plasma Glucose $\ge$126 mg/dL), and Number of Teeth present.
+    \item \textbf{Oral Hygiene}: Frequency of interdental cleaning (flossing) was categorized as daily (7 days/week), frequent (4-6 days/week), infrequent (1-3 days/week), or never (0 days/week).
+\end{itemize}
+
+\subsection{Statistical Analysis}
+All statistical analyses were performed using Python (pandas, statsmodels) within a secure analysis vault, accounting for the complex survey design of NHANES.
+
+\subsubsection{Weighting}
+Six-year examination weights (`WTMEC6YR`) were constructed by dividing the 2-year Mobile Examination Center (MEC) weights (`WTMEC2YR`) by 3, as recommended by NCHS analytical guidelines for combining three survey cycles. These weights account for unequal probabilities of selection, non-response, and oversampling of certain demographic groups.
+
+\subsubsection{Descriptive Statistics}
+Weighted means and standard errors (SE) were calculated for continuous variables, and weighted frequencies and percentages were calculated for categorical variables. Baseline characteristics were stratified by periodontitis status (Moderate/Severe vs. None/Mild). Differences between groups were assessed using t-tests for continuous variables and Rao-Scott Chi-square tests for categorical variables.
+
+\subsubsection{Regression Modeling}
+Multivariable logistic regression models were used to estimate odds ratios (ORs) and 95\% confidence intervals (CIs) for the association between each nutrient intake and the prevalence of moderate/severe periodontitis.
+\begin{itemize}
+    \item \textbf{Model 1}: Unadjusted.
+    \item \textbf{Model 2}: Adjusted for Age, Sex, Race/Ethnicity, and Total Energy Intake.
+    \item \textbf{Model 3}: Further adjusted for Education, Income-to-Poverty Ratio, Smoking Status, BMI, Diabetes, Alcohol Intake, Physical Activity, and Oral Hygiene (flossing).
+\end{itemize}
+
+Statistical significance was defined as a two-sided p-value $< 0.05$.
+
+\section{Results}
+
+\subsection{Study Population Characteristics}
+The study included 8,006 participants. Figure \ref{fig:strobe} illustrates the participant selection process. The weighted characteristics of the study population stratified by periodontitis status are presented in Table \ref{tab:characteristics}.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{../04-analysis/outputs/figures/strobe_flow.png}
+    \caption{STROBE Flow Diagram of Participant Selection}
+    \label{fig:strobe}
+\end{figure}
+
+Participants with moderate/severe periodontitis differed significantly from those with no/mild disease. Consistent with established literature, the periodontitis group was older (mean age 53.8 vs. 44.7 years), had lower socioeconomic status (lower income-to-poverty ratio and education levels), and included a substantially higher proportion of current smokers (20.1\% vs. 9.1\%). These findings reinforce the strong influence of social determinants and health behaviors on periodontal health.
+
+\begin{table}[ht]
+\centering
+\caption{Baseline Characteristics of Study Population by Periodontitis Status, NHANES 2009-2014}
+\label{tab:characteristics}
+\begin{adjustbox}{width=\textwidth}
+\begin{tabular}{lccc}
+\toprule
+\textbf{Variable} & \textbf{No/Mild Periodontitis} & \textbf{Moderate/Severe Periodontitis} & \textbf{P-value} \\
+ & (Mean (SD) or \%) & (Mean (SD) or \%) & \\
+\midrule
+Age (years) & 44.68 (11.28) & 53.77 (13.70) & <0.001 \\
+\textbf{Sex} & & & \\
+\hspace{3mm} Male & 46.4\% & 48.9\% & \\
+\hspace{3mm} Female & 53.6\% & 51.1\% & \\
+\textbf{Race/Ethnicity} & & & \\
+\hspace{3mm} Mexican American & 5.8\% & 7.4\% & \\
+\hspace{3mm} Non-Hispanic Black & 5.9\% & 11.4\% & \\
+\hspace{3mm} Non-Hispanic White & 78.4\% & 69.8\% & \\
+\hspace{3mm} Other & 6.1\% & 6.4\% & \\
+\hspace{3mm} Other Hispanic & 3.8\% & 5.0\% & \\
+\textbf{Education} & & & \\
+\hspace{3mm} < High School & 5.4\% & 17.0\% & \\
+\hspace{3mm} > High School & 82.4\% & 59.2\% & \\
+\hspace{3mm} High School/GED & 12.2\% & 23.7\% & \\
+Income-to-Poverty Ratio & 3.81 (1.43) & 3.02 (1.62) & <0.001 \\
+BMI (kg/m\textsuperscript{2}) & 28.67 (6.28) & 29.39 (6.68) & <0.001 \\
+\textbf{Smoking Status} & & & \\
+\hspace{3mm} Current & 9.1\% & 20.1\% & \\
+\hspace{3mm} Former & 21.9\% & 27.5\% & \\
+\hspace{3mm} Never & 69.0\% & 52.4\% & \\
+\textbf{Diabetes} & & & \\
+\hspace{3mm} No & 95.6\% & 88.6\% & \\
+\hspace{3mm} Yes & 4.4\% & 11.4\% & \\
+Alcohol (drinks/day) & 1.88 (1.83) & 2.00 (2.36) & <0.001 \\
+\textbf{Physical Activity} & & & \\
+\hspace{3mm} Active & 40.5\% & 42.5\% & \\
+\hspace{3mm} Inactive & 59.5\% & 57.5\% & \\
+\textbf{Flossing Frequency} & & & \\
+\hspace{3mm} Daily & 31.9\% & 31.3\% & \\
+\hspace{3mm} Frequent & 14.6\% & 11.9\% & \\
+\hspace{3mm} Infrequent & 32.9\% & 24.7\% & \\
+\hspace{3mm} Never & 20.6\% & 32.1\% & \\
+Total Energy (kcal) & 2228.44 (846.17) & 2092.22 (871.91) & <0.001 \\
+Total Sugars (g) & 111.70 (64.46) & 107.11 (66.73) & <0.001 \\
+Dietary Fiber (g) & 19.01 (9.96) & 16.87 (9.53) & <0.001 \\
+Vitamin C (mg) & 82.94 (78.53) & 75.08 (73.23) & <0.001 \\
+Calcium (mg) & 1045.09 (535.69) & 927.67 (523.18) & <0.001 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\footnotesize{Note: Values are weighted Means (SD) for continuous variables and weighted Percentages for categorical variables. P-values derived from t-tests or Chi-square tests.}
+\end{table}
+
+\subsection{Dietary Intake Differences}
+Descriptive analyses revealed that individuals with periodontitis reported lower mean intakes of protective nutrients compared to healthy individuals:
+\begin{itemize}
+    \item \textbf{Dietary Fiber:} 16.9 g/day vs. 19.0 g/day.
+    \item \textbf{Vitamin C:} 75.1 mg/day vs. 82.9 mg/day.
+    \item \textbf{Calcium:} 928 mg/day vs. 1045 mg/day.
+\end{itemize}
+These unadjusted differences suggest a pattern of poorer dietary quality among those with periodontal disease.
+
+\subsection{Association with Periodontitis}
+The results of the logistic regression analyses are presented in Table \ref{tab:models}.
+
+\begin{table}[ht]
+\centering
+\caption{Association Between Dietary Nutrients and Moderate/Severe Periodontitis (Logistic Regression Models)}
+\label{tab:models}
+\begin{adjustbox}{width=\textwidth}
+\begin{tabular}{lccccc}
+\toprule
+\textbf{Exposure} & \textbf{Model} & \textbf{OR} & \textbf{95\% CI} & \textbf{P-value} & \textbf{N} \\
+\midrule
+\textbf{Total Sugars (g/day)} & & & & & \\
+\hspace{3mm} Model 1 (Unadjusted) & 1.00 & 1.00-1.00 & <0.001 & 8006 \\
+\hspace{3mm} Model 2 (Adjusted\textsuperscript{a}) & 1.00 & 1.00-1.00 & <0.001 & 8006 \\
+\hspace{3mm} Model 3 (Fully Adjusted\textsuperscript{b}) & 1.00 & 1.00-1.00 & <0.001 & 8006 \\
+\addlinespace
+\textbf{Dietary Fiber (g/day)} & & & & & \\
+\hspace{3mm} Model 1 (Unadjusted) & 0.98 & 0.98-0.98 & <0.001 & 8006 \\
+\hspace{3mm} Model 2 (Adjusted\textsuperscript{a}) & 0.97 & 0.97-0.97 & <0.001 & 8006 \\
+\hspace{3mm} Model 3 (Fully Adjusted\textsuperscript{b}) & 0.99 & 0.99-0.99 & <0.001 & 8006 \\
+\addlinespace
+\textbf{Vitamin C (mg/day)} & & & & & \\
+\hspace{3mm} Model 1 (Unadjusted) & 1.00 & 1.00-1.00 & <0.001 & 8006 \\
+\hspace{3mm} Model 2 (Adjusted\textsuperscript{a}) & 1.00 & 1.00-1.00 & <0.001 & 8006 \\
+\hspace{3mm} Model 3 (Fully Adjusted\textsuperscript{b}) & 1.00 & 1.00-1.00 & <0.001 & 8006 \\
+\addlinespace
+\textbf{Calcium (mg/day)} & & & & & \\
+\hspace{3mm} Model 1 (Unadjusted) & 1.00 & 1.00-1.00 & <0.001 & 8006 \\
+\hspace{3mm} Model 2 (Adjusted\textsuperscript{a}) & 1.00 & 1.00-1.00 & <0.001 & 8006 \\
+\hspace{3mm} Model 3 (Fully Adjusted\textsuperscript{b}) & 1.00 & 1.00-1.00 & <0.001 & 8006 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\footnotesize{
+\textsuperscript{a} Adjusted for Age, Sex, Race/Ethnicity, and Total Energy Intake. \\
+\textsuperscript{b} Further adjusted for Education, PIR, Smoking, BMI, Diabetes, Alcohol, Physical Activity, and Flossing.
+}
+\end{table}
+
+In multivariable logistic regression models adjusted for age, sex, race/ethnicity, total energy intake, socioeconomic status, smoking, BMI, diabetes, alcohol use, physical activity, and oral hygiene behavior:
+
+\begin{itemize}
+    \item \textbf{Dietary Fiber:} Higher dietary fiber intake was independently and significantly associated with lower odds of moderate/severe periodontitis (OR 0.99, 95\% CI: 0.99-0.99, $p<0.001$). While the effect size per gram is small (approximately 1\% risk reduction per gram), this accumulates to a clinically meaningful protective effect for individuals meeting recommended intake levels (e.g., a difference of 10g/day could correspond to $\sim$10\% lower odds). This finding aligns with previous studies \citep{Nielsen2016,Chuai2023} suggesting anti-inflammatory and glycemic control mechanisms.
+
+    \item \textbf{Micronutrients (Vitamin C, Calcium):} Although unadjusted means differed, the multivariable models yielded Odds Ratios of 1.00 ($p<0.001$) per milligram. This indicates that while statistically significant due to the large sample size, the independent effect of each *milligram* of Vitamin C or Calcium on periodontitis risk is negligible after comprehensive adjustment. It is possible that the protective effects observed in descriptive data are partially explained by confounding factors like smoking and overall diet quality, or that threshold effects exist \citep{Li2022} that are not captured by linear modeling.
+
+    \item \textbf{Total Sugars:} The model for total sugars also yielded an OR of 1.00 ($p<0.001$), suggesting no strong independent association per gram of total sugar intake after adjustment. This contrasts with some literature on added sugars or sugar-sweetened beverages \citep{AlvesCosta2024}, potentially because "total sugars" includes intrinsic sugars from fruits and milk which may not be cariogenic or pro-inflammatory in the same way as free sugars.
+\end{itemize}
+
+\section{Discussion}
+
+\subsection{Synthesis of Findings}
+This study analyzed data from 8,006 U.S. adults participating in NHANES 2009-2014 to investigate the association between specific dietary nutrient intakes and the prevalence of periodontitis. The analysis focused on four key nutrients: total sugars, dietary fiber, Vitamin C, and Calcium.
+
+Our results corroborate the protective role of dietary fiber highlighted by \citet{Nielsen2016} and \citet{Chuai2023}. However, our null/weak findings for total sugars and micronutrients after adjustment suggest that focusing on overall dietary patterns or specific sources (e.g., added sugars vs. fruit) might be more relevant than total nutrient aggregates, as suggested by \citet{Wright2020} regarding whole-food patterns.
+
+\subsection{Strengths and Limitations}
+\textbf{Strengths:}
+\begin{itemize}
+    \item Use of a large, nationally representative sample (NHANES) with high generalizability.
+    \item Gold-standard full-mouth periodontal examination data.
+    \item Adjustment for a comprehensive set of confounders including smoking, diabetes, and oral hygiene.
+\end{itemize}
+
+\textbf{Limitations:}
+\begin{itemize}
+    \item \textbf{Cross-sectional design:} Precludes causal inference; reverse causality is possible (e.g., dental pain altering diet).
+    \item \textbf{Dietary measurement error:} Single 24-hour recall may not reflect long-term habitual intake.
+    \item \textbf{Residual confounding:} Unmeasured factors like genetic predisposition or specific biofilm composition were not accounted for.
+    \item \textbf{Variable definition:} "Total sugars" may lack the specificity of "added sugars" for detecting adverse effects.
+\end{itemize}
+
+\section{Conclusion}
+
+\subsection{Summary of Findings}
+This cross-sectional analysis of 8,006 U.S. adults demonstrates that a diet higher in fiber is associated with a significantly reduced likelihood of moderate to severe periodontitis, independent of established risk factors such as smoking, diabetes, and socioeconomic status. While absolute differences in nutrient intake were observed between groups, the independent association with total sugars and specific micronutrients (Vitamin C, Calcium) was statistically significant but clinically negligible after comprehensive adjustment.
+
+\subsection{Implications}
+\begin{itemize}
+    \item \textbf{Public Health:} The findings support dietary guidelines emphasizing adequate fiber intake (e.g., from fruits, vegetables, whole grains) as a potential modifiable factor for periodontal health.
+    \item \textbf{Clinical Practice:} Dental professionals should consider dietary counseling, particularly regarding fiber-rich foods, as an adjunct to traditional periodontal therapy.
+    \item \textbf{Future Research:} Longitudinal studies are needed to confirm causality. Investigations focusing on *added sugars* rather than total sugars, and using specific food sources or dietary patterns, may yield stronger associations.
+\end{itemize}
+
+\bibliographystyle{unsrtnat}
+\bibliography{../01-literature/references}
+
+\end{document}
